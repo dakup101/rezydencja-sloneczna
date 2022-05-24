@@ -15,6 +15,7 @@ export default function introAnimation() {
     setTimeout(()=>{
         wrapper.classList.add('remove');
     },6400)
+    sessionStorage.setItem('evrwhr_rezydencja_intro', 'rendered');
 
     // Methods
     function activate() {

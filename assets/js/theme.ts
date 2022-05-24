@@ -1,7 +1,8 @@
-import introAnimation from './sub/introAnimation'
 // On Load
-
+import introAnimationHandle from "./sub/introAnimation-handle";
+import scrollEvents from "./sub/scrollEvents";
 // Rendered
 window.addEventListener('DOMContentLoaded', () => {
-    introAnimation();
+    introAnimationHandle();
+    scrollEvents();
 });
