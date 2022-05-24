@@ -1,5 +1,78 @@
-* {
-  color: yellow;
+.intro {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transition: 0.5s ease-in-out;
+}
+.intro--wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.intro.remove {
+  opacity: 0;
+}
+.intro__slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.intro__slide--img {
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  overflow: hidden;
+  opacity: 0;
+  top: 30%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  transition: all 400ms linear;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+.intro__slide.active .intro__slide--img {
+  opacity: 1;
+  top: 50%;
+}
+.intro__slide.remove .intro__slide--img {
+  opacity: 0;
+  top: 70%;
+}
+.intro__slide--text {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  opacity: 0;
+  transform: translateY(-50%) translateX(-50%);
+  transition: all 450ms linear;
+  font-size: 130px;
+  color: white;
+  width: 100%;
+  text-align: center;
+  text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+.intro__slide.active .intro__slide--text {
+  opacity: 1;
+  left: 50%;
+}
+.intro__slide.remove .intro__slide--text {
+  opacity: 0;
+  left: 70%;
+}
+
+.stage__default {
+  background: #333;
+}
+.stage__0 {
+  background: #f1bb59;
+}
+.stage__1 {
+  background: #5ed780;
+}
+.stage__2 {
+  background: #5eb9d7;
 }
 
 /*# sourceMappingURL=theme.css.map */
