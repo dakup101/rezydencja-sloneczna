@@ -27,6 +27,7 @@
     transition: all .3s ease-in-out;
     &--text{
       font-size: 16px;
+      font-weight: bold;
       animation-name: bounce;
       animation-timing-function: ease;
       animation-duration: 1.5s;
