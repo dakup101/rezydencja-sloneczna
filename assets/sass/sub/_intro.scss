@@ -12,53 +12,84 @@
     width: 100%;
     height: 100%;
   }
-  &.remove{
-    opacity: 0;
-  }
-  &__slide{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    &--img{
-      position: absolute;
-      width: 800px;
-      height: 800px;
-      overflow: hidden;
-      opacity: 0;
-      top: 30%;
+  &__text{
+    &--wrapper{
+      top: 50%;
       left: 50%;
-      transform: translateY(-50%) translateX(-50%);
-      transition: all 400ms linear;
-      box-shadow: 0 15px 25px rgba(0,0,0,.2);
-    }
-    &.active &--img{
-      opacity: 1;
-      top: 50%;
-    }
-    &.remove &--img{
-      opacity: 0;
-      top: 70%;
-    }
-    &--text{
+      transform: translateX(-50%) translateY(-50%);
+      min-width: 100%;
+      height: 100px;
       position: absolute;
-      top: 50%;
-      left: 30%;
-      opacity: 0;
-      transform: translateY(-50%) translateX(-50%);
-      transition: all 450ms linear;
-      font-size: 130px;
-      color: white;
+      z-index: 50;
+    }
+    &--content{
+      position: relative;
+      min-width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+    }
+    &--item{
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 80px;
+      font-weight: bold;
+      text-transform: uppercase;
+      line-height: 100px;
       width: 100%;
       text-align: center;
-      text-shadow: 0 5px 15px rgba(0,0,0,.3);
+      transition: all 400ms ease-in;
+      &.active{
+        top: 0;
+      }
+      &.remove{
+        transform: translateX(-50%) translateY(-100%);
+      }
     }
-    &.active &--text{
-      opacity: 1;
+
+  }
+  &__image{
+    &--wrapper{
+      top: 50%;
       left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      width: 800px;
+      height: 800px;
+      position: absolute;
+      z-index: 25;
     }
-    &.remove &--text{
-      opacity: 0;
-      left: 70%;
+    &--content{
+      position: relative;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+    }
+    &--item-wrapper{
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 800ms ease-in-out;
+      &.active{
+        top: 0;
+        left: 0;
+      }
+      &.remove-top{
+        transform: translateY(-100%);
+      }
+    }
+    &--item-image{
+      width: 100%;
+      min-height: 100%;
     }
   }
 }
@@ -74,5 +105,8 @@
   }
   &__2{
     background: $color-blue;
+  }
+  &__3{
+    background: #333;
   }
 }

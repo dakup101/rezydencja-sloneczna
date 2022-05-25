@@ -1,31 +1,31 @@
 export default function introAnimation() {
     // Props
-    let currentSlide: number = 0;
-    let waitTime = 1000;
+    let introTexts = document.querySelectorAll('[data-slide_text]');
+    let introImages = document.querySelectorAll('[data-slide_img]');
     let wrapper: HTMLElement = document.querySelector('[data-intro]');
-    let slides: NodeListOf<HTMLElement> = wrapper.querySelectorAll('[data-intro_slide]');
-    console.log(slides);
 
-    // Action
-    activate();
-    setTimeout(disable, 2000);
-    setTimeout(activate, 2200);
-    setTimeout(disable, 4200);
-    setTimeout(activate, 4400);
+    //Actions
+    introTexts[0].classList.add('active');
+    introImages[0].classList.add('active');
+    wrapper.classList.add('stage__0')
     setTimeout(()=>{
-        wrapper.classList.add('remove');
-    },6400)
-    sessionStorage.setItem('evrwhr_rezydencja_intro', 'rendered');
+        introTexts[0].classList.add('remove');
+        introImages[0].classList.add('remove-top');
+        introTexts[1].classList.add('active');
+        introImages[1].classList.add('active');
+        wrapper.classList.add('stage__1')
+        setTimeout(()=>{
+            introTexts[1].classList.add('remove');
+            introImages[1].classList.add('remove-top');
+            introTexts[2].classList.add('active');
+            introImages[2].classList.add('active');
+            wrapper.classList.add('stage__2')
+            setTimeout(()=>{
+                wrapper.style.transform=('translateY(-100%)');
+                wrapper.classList.add('stage__3');
+            },1000)
+        }, 1000)
+    }, 1000)
 
-    // Methods
-    function activate() {
-        wrapper.classList.add('stage__' + (currentSlide))
-        console.log(currentSlide);
-        slides[currentSlide].classList.add('active');
-    }
-
-    function disable(){
-        slides[currentSlide].classList.add('remove');
-        currentSlide++;
-    }
+    sessionStorage.setItem('evrwhr_rezydencja_intro', 'seen')
 }
