@@ -1,4 +1,5 @@
 export default function introAnimation() {
+    console.log('--- Intro Animation Loaded ---')
     // Props
     let introTexts = document.querySelectorAll('[data-slide_text]');
     let introImages = document.querySelectorAll('[data-slide_img]');

@@ -85,3 +85,44 @@ img.border-radius{
     }
   }
 }
+
+.cons{
+  &__item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 1.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+    &--icon{
+      height: 50px;
+    }
+    &--text{
+      text-align: center;
+      font-weight: bold;
+      font-size: $font-content-bigger;
+    }
+    :after{
+      content: '';
+      height: 2px;
+      width: 50px;
+      background: green;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.swiper{
+  &-slide{
+    background: yellow;
+    transition: all .4s ease-in-out;
+  }
+  &-slide-next + &-slide{
+    width: 35% !important;
+  }
+}

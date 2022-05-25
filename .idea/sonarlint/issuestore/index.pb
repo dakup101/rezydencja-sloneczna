@@ -1,10 +1,6 @@
 
 9
 	style.css,4\6\46e3381e9569c09e85a30b9e5a2af7525ee9fd78
-A
-webpack.config.js,d\5\d5595158cc48f9bf3e51b06f6e6805a8fd2d6262
-<
-package.json,7\0\7030d0b2f71b999ff89a343de08c414af32fc93a
 =
 functions.php,6\4\643aa1403c67715cb89bd66603f19c787bddaea9
 T

@@ -16,7 +16,7 @@
   \************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ introAnimationHandle)\n/* harmony export */ });\nfunction introAnimationHandle() {\r\n    let introSession = sessionStorage.getItem('evrwhr_rezydencja_intro');\r\n    if (!introSession) {\r\n        __webpack_require__.e(/*! import() | print */ \"print\").then(__webpack_require__.bind(__webpack_require__, /*! ./introAnimation */ \"./assets/js/sub/introAnimation.ts\")).then(module => {\r\n            const introAnimation = module.default;\r\n            introAnimation();\r\n        });\r\n    }\r\n    else\r\n        document.querySelector('[data-intro]').remove();\r\n}\r\n\n\n//# sourceURL=webpack://instytut-zdrowia/./assets/js/sub/introAnimation-handle.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ introAnimationHandle)\n/* harmony export */ });\nfunction introAnimationHandle() {\r\n    let introSession = sessionStorage.getItem('evrwhr_rezydencja_intro');\r\n    if (!introSession) {\r\n        Promise.all(/*! import() | print */[__webpack_require__.e(\"vendors-node_modules_swiper_modules_navigation_navigation_min_css-node_modules_swiper_modules-a7262e\"), __webpack_require__.e(\"print\")]).then(__webpack_require__.bind(__webpack_require__, /*! ./introAnimation */ \"./assets/js/sub/introAnimation.ts\")).then(module => {\r\n            const introAnimation = module.default;\r\n            introAnimation();\r\n        });\r\n    }\r\n    else\r\n        document.querySelector('[data-intro]').remove();\r\n}\r\n\n\n//# sourceURL=webpack://instytut-zdrowia/./assets/js/sub/introAnimation-handle.ts?");
 
 /***/ }),
 
@@ -30,13 +30,23 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./assets/js/sub/swiper-handle.ts":
+/*!****************************************!*\
+  !*** ./assets/js/sub/swiper-handle.ts ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ swiperHandle)\n/* harmony export */ });\nfunction swiperHandle() {\r\n    let swiperWrapper = document.querySelector('.swiper');\r\n    if (swiperWrapper) {\r\n        Promise.all(/*! import() | print */[__webpack_require__.e(\"vendors-node_modules_swiper_modules_navigation_navigation_min_css-node_modules_swiper_modules-a7262e\"), __webpack_require__.e(\"print\")]).then(__webpack_require__.bind(__webpack_require__, /*! ./swiper */ \"./assets/js/sub/swiper.ts\")).then(module => {\r\n            const initSwiper = module.default;\r\n            initSwiper();\r\n        });\r\n    }\r\n}\r\n\n\n//# sourceURL=webpack://instytut-zdrowia/./assets/js/sub/swiper-handle.ts?");
+
+/***/ }),
+
 /***/ "./assets/js/theme.ts":
 /*!****************************!*\
   !*** ./assets/js/theme.ts ***!
   \****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sub_introAnimation_handle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sub/introAnimation-handle */ \"./assets/js/sub/introAnimation-handle.ts\");\n/* harmony import */ var _sub_scrollEvents__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./sub/scrollEvents */ \"./assets/js/sub/scrollEvents.ts\");\n// On Load\r\n\r\n\r\n// Rendered\r\nwindow.addEventListener('DOMContentLoaded', () => {\r\n    (0,_sub_introAnimation_handle__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n    (0,_sub_scrollEvents__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\r\n});\r\n\n\n//# sourceURL=webpack://instytut-zdrowia/./assets/js/theme.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sub_introAnimation_handle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sub/introAnimation-handle */ \"./assets/js/sub/introAnimation-handle.ts\");\n/* harmony import */ var _sub_swiper_handle__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./sub/swiper-handle */ \"./assets/js/sub/swiper-handle.ts\");\n/* harmony import */ var _sub_scrollEvents__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./sub/scrollEvents */ \"./assets/js/sub/scrollEvents.ts\");\n// On Load\r\n\r\n\r\n\r\n// Rendered\r\nwindow.addEventListener('DOMContentLoaded', () => {\r\n    (0,_sub_introAnimation_handle__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n    (0,_sub_swiper_handle__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\r\n    (0,_sub_scrollEvents__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\r\n});\r\n\n\n//# sourceURL=webpack://instytut-zdrowia/./assets/js/theme.ts?");
 
 /***/ })
 
@@ -54,7 +64,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sub
 /******/ 		}
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = __webpack_module_cache__[moduleId] = {
-/******/ 			// no module.id needed
+/******/ 			id: moduleId,
 /******/ 			// no module.loaded needed
 /******/ 			exports: {}
 /******/ 		};
@@ -70,6 +80,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sub
 /******/ 	__webpack_require__.m = __webpack_modules__;
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
@@ -200,7 +222,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sub
 /******/ 	
 /******/ 	/* webpack/runtime/jsonp chunk loading */
 /******/ 	(() => {
-/******/ 		// no baseURI
+/******/ 		__webpack_require__.b = document.baseURI || self.location.href;
 /******/ 		
 /******/ 		// object to store loaded and loading chunks
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
@@ -286,6 +308,11 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sub
 /******/ 		var chunkLoadingGlobal = self["webpackChunkinstytut_zdrowia"] = self["webpackChunkinstytut_zdrowia"] || [];
 /******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/nonce */
+/******/ 	(() => {
+/******/ 		__webpack_require__.nc = undefined;
 /******/ 	})();
 /******/ 	
 /************************************************************************/
