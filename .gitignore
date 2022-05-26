@@ -1,7 +1,9 @@
-node_modules
-node_modules/
+/node_modules
+/node_modules/
+/.idea
+/.idea/
 package-lock.json
-.idea
-.idea/
+/.idea
+/.idea/
 /assets/compiled
 /assets/compiled/

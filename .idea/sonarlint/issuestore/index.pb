@@ -23,3 +23,13 @@ P
  assets/images/svg/arrow-down.svg,9\e\9ed5eb83260403bae3faced1d5811a5e41bc714f
 O
 assets/images/svg/fb-header.svg,6\7\6797287b37d407ecabeda955bd6416d11d2e09db
+G
+pages/page-homepage.php,3\c\3c9ddf71c7b1ed5f91ce32d695d200ddd6b4ba1e
+g
+7components/components-homepage/homepage-maincontent.php,e\9\e9c1ab13de6e5222dba43c3a81b8482474b5cf44
+p
+@components/components-homepage/homepage-icons-row-horizontal.php,b\a\ba59bf4a7e9748cec97d0451224e06519e304b99
+S
+#assets/images/svg/s-arrow-right.svg,7\d\7d9889780b0cce4b3561edec0b8d43f855631cad
+`
+0components/components-homepage/homepage-cons.php,6\e\6e993342bba71be7c8b99bee172a900508abe621
