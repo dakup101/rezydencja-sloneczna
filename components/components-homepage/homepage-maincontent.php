@@ -8,7 +8,7 @@ $text_right = $mc['text_right'];
 $img_right = $mc['img_right'];
 ?>
 <section class="homepage-maincontent content mt-5 pt-5">
-    <div class="row gx-5">
+    <div class="row mx-0 px-0">
         <div class="col-12 col-md-6">
             <div class="row">
                 <div class="col-12 col-md-10">
@@ -46,7 +46,7 @@ $img_right = $mc['img_right'];
             </div>
         </div>
     </div>
-    <div class="row py-5">
+    <div class="row py-5 px-0 mx-0">
         <div class="col-md-10 col-12 offset-md-1">
             <?php get_template_part('/components/components-homepage/homepage-icons-row-horizontal')?>
         </div>

@@ -8,7 +8,7 @@ $offer = get_field('oferta');
     <div class="content__text text-center mb-5 pb-3">
         <?php echo $title['subtitle']; ?>
     </div>
-    <div class="row">
+    <div class="row px-0 mx-0">
         <div class="col-12 col-md-10 offset-md-1">
             <div class="cons__wrapper">
                 <div class="row gx-5">
