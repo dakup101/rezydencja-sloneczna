@@ -8,7 +8,7 @@ $text_right = $mc['text_right'];
 $img_right = $mc['img_right'];
 ?>
 <section class="homepage-maincontent content mt-5 pt-5">
-    <div class="row mx-0 px-0">
+    <div class="row mx-0 px-0 gx-5">
         <div class="col-12 col-md-6">
             <div class="row">
                 <div class="col-12 col-md-10">

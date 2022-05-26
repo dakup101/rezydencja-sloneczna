@@ -1,0 +1,26 @@
+.icons-row{
+  .horizontal &{
+    &__wrapper{
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      margin-bottom: 2.5rem;
+    }
+    &__icon{
+      width: 75px;
+    }
+    &__content{
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+      &--title{
+        font-size: $font-content-bigger;
+        color: #06bd69;
+        font-weight: bold;
+      }
+      &--text{
+        font-size: $font-content;
+      }
+    }
+  }
+}

@@ -3,15 +3,23 @@
 @import "sub/intro";
 @import "sub/homepage";
 @import "sub/header";
+@import "sub/swiper";
+@import "sub/icons-row";
+@import "sub/cons";
+@import "sub/content";
+@import "sub/homepage-maincontent";
+
 img {
   user-drag: none;
   user-select: none;
 }
+
 .site-container{
   width: 100%;
   padding-left: 5rem;
   padding-right: 5rem;
 }
+
 .sr-container{
   max-width: 1410px;
   padding-right: 15px;
@@ -19,207 +27,20 @@ img {
   margin: 0 auto;
   display: block;
 }
-.content{
-  & img{
-    width: 100%;
-  }
-  &__text{
-    font-size: $font-content;
-    & p{
-      font-weight: 300;
-    }
-    & strong{
-      font-weight: 600;
-    }
-  }
-  &__title{
-    font-size: $font-content-title;
-    & p{
-      font-weight: 300;
-    }
-    & strong{
-      font-weight: 600;
-    }
-  }
-}
+
 .offset-img{
   &.left img{
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;
   }
 }
+
 img.border-radius{
   border-radius: 1rem;
 }
-.homepage-maincontent{
-  position: relative;
-  &__bg{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    z-index: -1;
-    opacity: .5;
-  }
-}
 
-.icons-row{
-  .horizontal &{
-    &__wrapper{
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-      margin-bottom: 2.5rem;
-    }
-    &__icon{
-      width: 75px;
-    }
-    &__content{
-      display: flex;
-      flex-direction: column;
-      gap: .5rem;
-      &--title{
-        font-size: $font-content-bigger;
-        color: #06bd69;
-        font-weight: bold;
-      }
-      &--text{
-        font-size: $font-content;
-      }
-    }
-  }
-}
 
-.cons{
-  &__item{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    padding-bottom: 1.5rem;
-    margin-bottom: 1rem;
-    position: relative;
-    &--icon{
-      height: 50px;
-    }
-    &--text{
-      text-align: center;
-      font-weight: bold;
-      font-size: $font-content-bigger;
-    }
-    :after{
-      content: '';
-      height: 2px;
-      width: 50px;
-      background: green;
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-  }
-}
 
-.offer-slider{
-  position: relative;
-}
-.swiper{
-  max-width: 100%;
-  height: fit-content;
-  padding-bottom: 40px;
-  &-slide{
-    transition: all .4s ease-in-out;
-    height: fit-content;
-    &__inner{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      border-radius: 1rem;
-      height: 300px;
-      transition: all .4s ease-in-out;
-    }
-    &__img{
-      min-width: 100%;
-      min-height: 100%;
-      & img{
-        pointer-events: none;
-      }
-    }
-    &-active *{
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
-    }
-  }
-  &-slide-next + &-slide{
-    width: 35% !important;
-    & .swiper-slide__inner{
-      height: 500px;
-    }
-  }
-  &-button{
-    &__wrapper{
-      position: absolute;
-      width: 35%;
-      left: calc(50% + 15px);
-      bottom: 0;
-      display: flex;
-      height: 20px;
-      align-items: center;
-      justify-content: space-between;
-      &--buttons{
-        position: relative;
-        display: flex;
-        gap: 2rem;
-        height: 100%;
-      }
-    }
-    &-prev, &-next{
-      position: unset;
-      height: 20px;
-      width: fit-content;
-      margin: 0;
-      color: #333
-    }
-    &-prev{
-      & svg{
-        height: 100%;
-        width: auto;
-        color: currentColor;
-        fill: currentColor;
-        transform: rotate(180deg);
-      }
-      &:after{
-        display: none !important;
-      }
-      &:hover{
-        color: green;
-      }
-    }
-    &-next{
-      &:after{
-        display: none !important;
-      }
-      & svg{
-        height: 100%;
-        width: auto;
-        color: currentColor;
-        fill: currentColor;
-      }
-      &:hover{
-        color: green;
-      }
-    }
-  }
-  &__bg{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
-  }
-  &__counter{
-    user-drag: none;
-    user-select: none;
-  }
-}
+
+
+
