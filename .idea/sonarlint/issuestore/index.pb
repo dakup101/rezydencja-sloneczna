@@ -1,8 +1,6 @@
 
 9
 	style.css,4\6\46e3381e9569c09e85a30b9e5a2af7525ee9fd78
-=
-functions.php,6\4\643aa1403c67715cb89bd66603f19c787bddaea9
 T
 $functions/php-add-scripts-styles.php,0\1\0197555521b15da56a7bb1d853cdea27f2438195
 :

@@ -9,3 +9,4 @@ require_once(THEME.'/functions/php-admin-sticky-update.php');
 require_once(THEME.'/functions/php-register-menus.php');
 require_once(THEME.'/functions/php-disable-comments.php');
 require_once(THEME.'/functions/php-options-page.php');
+require_once(THEME.'/functions/php-register-apartament-taxonomy.php');
