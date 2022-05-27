@@ -610,6 +610,51 @@ section.contact {
   font-weight: bold;
 }
 
+.site-footer {
+  color: #434236;
+}
+.site-footer .content__title {
+  font-weight: 500 !important;
+}
+.site-footer .content__text, .site-footer .content__text p {
+  font-weight: 400 !important;
+}
+.site-footer__sm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.site-footer a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+.site-footer a:hover {
+  color: #06bd69;
+}
+.site-footer__copyright {
+  border-top: 1px solid #c3c3c5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.site-footer__copyright--pp {
+  transition: all 0.2s ease-in-out;
+}
+.site-footer__copyright--pp:hover {
+  color: #06bd69;
+}
+.site-footer__copyright--everywhere {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+}
+.site-footer__copyright--text {
+  margin-bottom: 0;
+}
+
 img {
   user-drag: none;
   user-select: none;
