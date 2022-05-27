@@ -1,8 +1,11 @@
 export default function apartamentTableSort() {
+    // Props
     let sortTrigger = document.querySelector('[data-meters_trigger]') as HTMLElement;
     let table = document.querySelector('[data-sort_table]');
     let rows = document.querySelectorAll('[data-sort_table_row]');
-    let i : number, shouldSwitch : boolean, dir ='asc', switchcount = 0;
+    let i : number, shouldSwitch : boolean, dir ='asc';
+
+    // Event Listener
     sortTrigger.addEventListener('click', e => {
         e.preventDefault();
         sortTable();
@@ -17,7 +20,7 @@ export default function apartamentTableSort() {
 
         console.log(dir)
     })
-
+    // Methods
     function sortTable() {
         let switching = true;
         console.log('--- Table Sort ---');
@@ -29,18 +32,14 @@ export default function apartamentTableSort() {
                 let x = parseFloat((rows[i].querySelector('[data-meters]') as HTMLElement).dataset.meters.replace(',', '.'))
                 let y = parseFloat((rows[i+1].querySelector('[data-meters]') as HTMLElement).dataset.meters.replace(',', '.'))
                 console.log ('- '+dir + ': ' + x + ' ? ' +y)
-                if (dir == "asc") {
-                    if (x> y) {
-                        shouldSwitch =true;
-                        break;
-                    }
-                    else shouldSwitch = false;
-                } else if (dir == "desc") {
-                    if (x < y) {
-                        shouldSwitch =true;
-                        break;
-                    }
-                    else shouldSwitch = false;
+                shouldSwitch = false;
+                if (dir == "asc" && x > y) {
+                    shouldSwitch =true;
+                    break;
+                }
+                if (dir == "desc" && x < y) {
+                    shouldSwitch =true;
+                    break;
                 }
             }
             if (shouldSwitch) {

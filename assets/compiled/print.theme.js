@@ -9,6 +9,16 @@
  */
 (self["webpackChunkinstytut_zdrowia"] = self["webpackChunkinstytut_zdrowia"] || []).push([["print"],{
 
+/***/ "./assets/js/sub/apartamentTableSort.ts":
+/*!**********************************************!*\
+  !*** ./assets/js/sub/apartamentTableSort.ts ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ apartamentTableSort)\n/* harmony export */ });\nfunction apartamentTableSort() {\r\n    // Props\r\n    let sortTrigger = document.querySelector('[data-meters_trigger]');\r\n    let table = document.querySelector('[data-sort_table]');\r\n    let rows = document.querySelectorAll('[data-sort_table_row]');\r\n    let i, shouldSwitch, dir = 'asc';\r\n    // Event Listener\r\n    sortTrigger.addEventListener('click', e => {\r\n        e.preventDefault();\r\n        sortTable();\r\n        if (dir == \"asc\") {\r\n            dir = \"desc\";\r\n            sortTrigger.dataset.type = \"1\";\r\n        }\r\n        else {\r\n            sortTrigger.dataset.type = \"0\";\r\n            dir = \"asc\";\r\n        }\r\n        console.log(dir);\r\n    });\r\n    // Methods\r\n    function sortTable() {\r\n        let switching = true;\r\n        console.log('--- Table Sort ---');\r\n        while (switching) {\r\n            rows = document.querySelectorAll('[data-sort_table_row]');\r\n            switching = false;\r\n            for (i = 0; i < rows.length - 1; i++) {\r\n                shouldSwitch = false;\r\n                let x = parseFloat(rows[i].querySelector('[data-meters]').dataset.meters.replace(',', '.'));\r\n                let y = parseFloat(rows[i + 1].querySelector('[data-meters]').dataset.meters.replace(',', '.'));\r\n                console.log('- ' + dir + ': ' + x + ' ? ' + y);\r\n                shouldSwitch = false;\r\n                if (dir == \"asc\" && x > y) {\r\n                    shouldSwitch = true;\r\n                    break;\r\n                }\r\n                if (dir == \"desc\" && x < y) {\r\n                    shouldSwitch = true;\r\n                    break;\r\n                }\r\n            }\r\n            if (shouldSwitch) {\r\n                table.insertBefore(rows[i + 1], rows[i]);\r\n                switching = true;\r\n            }\r\n            console.log('- Sort End');\r\n        }\r\n    }\r\n}\r\n\n\n//# sourceURL=webpack://instytut-zdrowia/./assets/js/sub/apartamentTableSort.ts?");
+
+/***/ }),
+
 /***/ "./assets/js/sub/introAnimation.ts":
 /*!*****************************************!*\
   !*** ./assets/js/sub/introAnimation.ts ***!

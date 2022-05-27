@@ -2,11 +2,13 @@
 import introAnimationHandle from "./sub/introAnimation-handle";
 import swiperHandle from "./sub/swiper-handle";
 import scrollEvents from "./sub/scrollEvents";
-import apartamentTableSort from "./sub/apartamentTableSort";
+import apartamentTableSortHandle from "./sub/apartamentTableSort-handle";
+import contactForm from "./sub/contactForm";
 // Rendered
 window.addEventListener('DOMContentLoaded', () => {
     introAnimationHandle();
-    swiperHandle()
+    swiperHandle();
     scrollEvents();
-    apartamentTableSort()
+    apartamentTableSortHandle();
+    contactForm();
 });
