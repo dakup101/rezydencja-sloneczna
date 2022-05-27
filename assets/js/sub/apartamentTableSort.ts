@@ -1,4 +1,5 @@
 export default function apartamentTableSort() {
+    console.log('--- Table Sort loaded ---')
     // Props
     let sortTrigger = document.querySelector('[data-meters_trigger]') as HTMLElement;
     let table = document.querySelector('[data-sort_table]');
@@ -17,13 +18,10 @@ export default function apartamentTableSort() {
             sortTrigger.dataset.type = "0";
             dir = "asc";
         }
-
-        console.log(dir)
     })
     // Methods
     function sortTable() {
         let switching = true;
-        console.log('--- Table Sort ---');
         while (switching) {
             rows = document.querySelectorAll('[data-sort_table_row]')
             switching = false;
@@ -31,7 +29,6 @@ export default function apartamentTableSort() {
                 shouldSwitch = false;
                 let x = parseFloat((rows[i].querySelector('[data-meters]') as HTMLElement).dataset.meters.replace(',', '.'))
                 let y = parseFloat((rows[i+1].querySelector('[data-meters]') as HTMLElement).dataset.meters.replace(',', '.'))
-                console.log ('- '+dir + ': ' + x + ' ? ' +y)
                 shouldSwitch = false;
                 if (dir == "asc" && x > y) {
                     shouldSwitch =true;
@@ -46,8 +43,6 @@ export default function apartamentTableSort() {
                 table.insertBefore(rows[i + 1], rows[i]);
                 switching = true;
             }
-
-            console.log('- Sort End')
         }
     }
 }
