@@ -7,13 +7,23 @@ $apartaments = get_posts($args);
 ?>
 
 <section class="apartamets">
+    <h2 class="content__title text-center mb-5">
+        Spis <strong>apartamentów</strong>
+    </h2>
     <div class="row mx-0 px-0">
         <div class="col-12 col-md-10 offset-md-1">
-            <table class="apartaments-list">
+            <table class="apartaments-list mb-5">
                 <caption></caption>
                 <thead>
                 <tr>
-                    <th>Powierzchnia [m2]</th>
+                    <th><a data-meters_trigger
+                           data-type="0"
+                           href="#"
+                        >
+                            Powierzchnia [m2]
+                            <svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 15"><polygon id="b" points="21 0 24 3.06 12 15 0 3.06 3 0 12 9 21 0"/></svg>
+                        </a>
+                    </th>
                     <th>Piętro</th>
                     <th>Ilość pokoi</th>
                     <th>Cena netto [m2]</th>
@@ -23,9 +33,9 @@ $apartaments = get_posts($args);
                     <th>Rzut Apartamentu</th>
                 </tr>
                 </thead>
-                <tbody>
+                <tbody data-sort_table>
                 <?php foreach ($apartaments as $el) : ?>
-                    <tr>
+                    <tr data-sort_table_row>
                         <?php
                         $el_args = get_field('apartament', $el->ID);
                         $meters = $el_args['meters'];
@@ -44,7 +54,7 @@ $apartaments = get_posts($args);
                         <td><?php echo $price ?> zł</td>
                         <td><?php echo $number ?></td>
                         <td class="apartaments-list__status apartaments-list__status--<?php echo $status ?>">
-                            <span class="apartament-list__status--info">
+                            <span class="apartaments-list__status--info">
                                 <?php echo $status ?>
                             </span>
                         </td>
@@ -65,6 +75,7 @@ $apartaments = get_posts($args);
                 <?php endforeach; ?>
                 </tbody>
             </table>
+            <a href="#" class="btn">Zobacz więcej</a>
         </div>
     </div>
 </section>

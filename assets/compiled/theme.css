@@ -414,12 +414,114 @@
 }
 .content__title {
   font-size: 36px;
+  font-weight: 300;
 }
 .content__title p {
-  font-weight: 300;
+  font-weight: inherit;
 }
 .content__title strong {
   font-weight: 600;
+}
+
+.homepage-maincontent {
+  position: relative;
+}
+.homepage-maincontent__bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+.apartaments-list {
+  width: 100%;
+}
+.apartaments-list td, .apartaments-list th {
+  padding: 1rem 2rem;
+  text-align: center;
+}
+.apartaments-list__file {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #cc0000;
+  width: fit-content;
+  margin: 0 auto;
+}
+.apartaments-list__file svg {
+  height: 2em;
+  fill: currentColor;
+}
+.apartaments-list__file:hover {
+  color: #5ed780;
+}
+.apartaments-list thead th {
+  border-bottom: 2px solid #c3c3c5;
+}
+.apartaments-list a[data-meters_trigger] {
+  color: #5ed780;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+.apartaments-list a[data-meters_trigger]:hover {
+  color: green;
+}
+.apartaments-list a[data-meters_trigger] svg {
+  width: 0.8em;
+  fill: currentColor;
+  transition: all 0.2s ease-in-out;
+}
+.apartaments-list a {
+  transition: all 0.2s ease-in-out;
+}
+.apartaments-list a[data-type="1"] svg {
+  transform: rotate(180deg);
+}
+.apartaments-list tr {
+  border-top: 1px solid #c3c3c5;
+}
+.apartaments-list tr:first-child {
+  border: none;
+}
+.apartaments-list tr:nth-child(2n) {
+  background: #f4f1ed;
+}
+.apartaments-list__status--info {
+  position: relative;
+  display: block;
+  width: fit-content;
+  padding-left: 1.5em;
+}
+.apartaments-list__status--info:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0.8em;
+  height: 0.8em;
+  background: gray;
+  border-radius: 100px;
+}
+.apartaments-list__status--rezerwacja .apartaments-list__status--info:before {
+  background: #e6b800;
+}
+.apartaments-list__status--sprzedane .apartaments-list__status--info:before {
+  background: #cc0000;
+}
+.apartaments-list__status--wolne .apartaments-list__status--info:before {
+  background: #5ed780;
+}
+
+.btn {
+  display: block;
+  padding: 1rem 2rem;
+  background: #5ed780;
 }
 
 img {

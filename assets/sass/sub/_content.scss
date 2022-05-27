@@ -13,8 +13,9 @@
   }
   &__title{
     font-size: $font-content-title;
+    font-weight: 300;
     & p{
-      font-weight: 300;
+      font-weight: inherit;
     }
     & strong{
       font-weight: 600;
