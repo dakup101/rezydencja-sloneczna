@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   line-height: 150%;
 }
@@ -100,7 +101,7 @@
   background: #f1bb59;
 }
 .stage__1 {
-  background: #5ed780;
+  background: #06bd69;
 }
 .stage__2 {
   background: #5eb9d7;
@@ -227,7 +228,7 @@
 }
 .site-header__nav--btn {
   padding: 1rem 2rem;
-  background: #5ed780;
+  background: #06bd69;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -455,13 +456,13 @@
   fill: currentColor;
 }
 .apartaments-list__file:hover {
-  color: #5ed780;
+  color: #06bd69;
 }
 .apartaments-list thead th {
   border-bottom: 2px solid #c3c3c5;
 }
 .apartaments-list a[data-meters_trigger] {
-  color: #5ed780;
+  color: #06bd69;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -515,13 +516,98 @@
   background: #cc0000;
 }
 .apartaments-list__status--wolne .apartaments-list__status--info:before {
-  background: #5ed780;
+  background: #06bd69;
 }
 
-.btn {
+.site-btn {
   display: block;
   padding: 1rem 2rem;
-  background: #5ed780;
+  width: fit-content;
+  text-transform: uppercase;
+  border-radius: 1000px;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  margin: 0 auto;
+}
+.site-btn__green {
+  background: #06bd69;
+  color: #333;
+}
+.site-btn__green:hover {
+  background: #129056;
+  color: white;
+}
+
+section.contact {
+  background: #f4f1ed;
+}
+
+.cf__label {
+  width: 100%;
+  position: relative;
+  margin-bottom: 2rem;
+}
+.cf__label--text {
+  position: absolute;
+  top: -1em;
+  left: 2em;
+  padding: 0 1em;
+  z-index: 10;
+  background: #f4f1ed;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #434236;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+.cf__label--required {
+  color: red;
+  font-size: 14px;
+  margin-left: 2px;
+}
+.cf__label input, .cf__label textarea {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 1rem;
+  background: #f4f1ed;
+  border: 2px solid #c3c3c5;
+}
+.cf br {
+  display: none;
+  visibility: hidden;
+}
+.cf-gdpr * {
+  margin: 0;
+}
+.cf-gdpr input[type=checkbox] {
+  display: none;
+  visibility: hidden;
+}
+.cf-gdpr input[type=checkbox]:checked + span:before {
+  border-color: #434236;
+  content: "✓";
+}
+.cf-gdpr .wpcf7-list-item-label {
+  display: block;
+  position: relative;
+  padding-left: 50px;
+  font-size: 12px;
+  user-select: none;
+}
+.cf-gdpr .wpcf7-list-item-label:before {
+  transition: all 0.2s ease-in-out;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  border: 2px solid #c3c3c5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: bold;
 }
 
 img {

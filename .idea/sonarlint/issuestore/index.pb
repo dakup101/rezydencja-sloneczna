@@ -10,9 +10,6 @@ K
 functions/php-allow-svg.php,b\2\b2bf48ac1d74a0ab60c67a5f75073f1acc3b10ab
 O
 functions/php-remove-editor.php,2\c\2cd9e2181897130ea0d82a4ca3cfab6cd4d89fc2
-:
-
-footer.php,6\2\6246d0d5e9ecbe1054c93f3841188709e0fb6e1a
 O
 components/component-footer.php,5\f\5f783efc14b5c8dcf87b4004ddf8a3639bbb3d45
 P

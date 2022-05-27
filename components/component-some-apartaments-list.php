@@ -6,13 +6,13 @@ $args = array(
 $apartaments = get_posts($args);
 ?>
 
-<section class="apartamets">
+<section class="apartamets mb-5">
     <h2 class="content__title text-center mb-5">
         Spis <strong>apartamentów</strong>
     </h2>
     <div class="row mx-0 px-0">
         <div class="col-12 col-md-10 offset-md-1">
-            <table class="apartaments-list mb-5">
+            <table class="apartaments-list mb-3">
                 <caption></caption>
                 <thead>
                 <tr>
@@ -75,7 +75,7 @@ $apartaments = get_posts($args);
                 <?php endforeach; ?>
                 </tbody>
             </table>
-            <a href="#" class="btn">Zobacz więcej</a>
+            <a href="#" class="site-btn site-btn__green">Zobacz więcej</a>
         </div>
     </div>
 </section>

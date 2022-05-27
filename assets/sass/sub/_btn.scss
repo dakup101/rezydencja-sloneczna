@@ -1,5 +1,18 @@
-.btn{
+.site-btn{
   display: block;
   padding: 1rem 2rem;
-  background: $color-green;
+  width: fit-content;
+  text-transform: uppercase;
+  border-radius: 1000px;
+  text-decoration: none;
+  transition: all .2s ease-in-out;
+  margin: 0 auto;
+  &__green{
+    background: $color-green;
+    color: #333;
+    &:hover{
+      background: $color-green-dark;
+      color: white;
+    }
+  }
 }
