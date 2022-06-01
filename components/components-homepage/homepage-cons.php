@@ -1,13 +1,15 @@
 <?php
-$title = get_field('cons_title');
-$offer = get_field('oferta');
+$title = get_field('cons_title', 'options');
+$offer = get_field('oferta', 'options');
 ?>
 
 <section class="cons py-5">
+    <?php if ($title) :?>
     <h2 class="content__title text-center"><?php echo $title['title']; ?></h2>
     <div class="content__text text-center mb-5 pb-3">
         <?php echo $title['subtitle']; ?>
     </div>
+    <?php endif; ?>
     <div class="row px-0 mx-0">
         <div class="col-12 col-md-10 offset-md-1">
             <div class="cons__wrapper">

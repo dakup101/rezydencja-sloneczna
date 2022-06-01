@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: unset;
+}
+
 @import "sub/variables";
 @import "sub/typo";
 @import "sub/intro";
@@ -12,6 +16,7 @@
 @import "sub/btn";
 @import "sub/contact-form";
 @import "sub/footer";
+@import "sub/scroll-gallery";
 
 img {
   user-drag: none;
@@ -42,7 +47,9 @@ img {
 img.border-radius{
   border-radius: 1rem;
 }
-
+.page-main{
+  margin-top: 165px;
+}
 
 
 
