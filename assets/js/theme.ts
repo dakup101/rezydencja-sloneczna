@@ -6,7 +6,7 @@ import swiperHandle from "./sub/swiper-handle";
 import scrollEvents from "./sub/scrollEvents";
 import apartamentTableSortHandle from "./sub/apartamentTableSort-handle";
 import contactFormHandle from "./sub/contactForm-handle";
-import scrollGallery from "./sub/scroll-gallery";
+import scrollGalleryHandle from "./sub/scrollGallery-handle";
 // Rendered
 window.scrollTo(0, 0);
 window.addEventListener('DOMContentLoaded', () => {
@@ -17,5 +17,5 @@ window.addEventListener('DOMContentLoaded', () => {
     scrollEvents();
     apartamentTableSortHandle();
     contactFormHandle();
-    scrollGallery();
+    scrollGalleryHandle();
 });

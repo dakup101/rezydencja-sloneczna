@@ -1,4 +1,5 @@
 export default function scrollEvents(){
+    console.log('--- Scroll Events loaded ---')
     document.addEventListener('scroll', function(e) {
         // Site Header
         let siteHeader = document.querySelector('[data-site_header]');
