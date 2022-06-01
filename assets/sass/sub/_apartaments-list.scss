@@ -1,0 +1,86 @@
+.apartaments-list{
+  width: 100%;
+  & td, & th{
+    padding: 1rem 2rem;
+    text-align: center;
+  }
+  &__file{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-red;
+    width: fit-content;
+    margin: 0 auto;
+    & svg{
+      height: 2em;
+      fill: currentColor;
+    }
+    &:hover{
+      color: $color-green;
+    }
+  }
+  & thead th{
+    border-bottom: 2px solid $color-gray;
+  }
+  & a[data-meters_trigger]{
+    color: $color-green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    text-decoration: none;
+    &:hover{
+      color: green;
+    }
+    & svg{
+      width: .8em;
+      fill: currentColor;
+      transition: all .2s ease-in-out;
+    }
+  }
+  & a{
+    transition: all .2s ease-in-out;
+    &[data-type="1"]{
+      & svg{
+        transform: rotate(180deg);
+      }
+    }
+  }
+  & tr{
+    border-top: 1px solid $color-gray;
+    &:first-child{
+      border: none;
+    }
+    &:nth-child(2n){
+      background: $color-gray-ligher;
+    }
+  }
+  &__status{
+    &--info{
+      position: relative;
+      display: block;
+      width: fit-content;
+      padding-left: 1.5em;
+      &:before{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: .8em;
+        height: .8em;
+        background: gray;
+        border-radius: 100px;
+      }
+    }
+    &--rezerwacja &--info:before{
+      background: $color-orange-alt;
+    }
+    &--sprzedane &--info:before{
+      background: $color-red;
+    }
+    &--wolne &--info:before{
+      background: $color-green;
+    }
+  }
+}

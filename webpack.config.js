@@ -17,10 +17,17 @@ module.exports = {
                 use: 'ts-loader',
                 exclude: /node_modules/,
             },
+            {
+                test: /\.css$/i,
+                use: ["style-loader", "css-loader"],
+            },
         ],
     },
     resolve: {
         extensions: ['.tsx', '.ts', '.js', '.json'],
+        alias: {
+            'utils': path.resolve(__dirname, './assets/js/helpers')  // <-- When you build or restart dev-server, you'll get an error if the path to your utils.js file is incorrect.
+        },
         plugins: [
             new TsconfigPathsPlugin({
                 configFile: './assets/js/tsconfig.json',

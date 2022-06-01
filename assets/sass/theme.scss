@@ -1,3 +1,57 @@
-*{
-  color: red;
+html {
+  scroll-behavior: unset;
 }
+
+@import "sub/variables";
+@import "sub/typo";
+@import "sub/intro";
+@import "sub/homepage";
+@import "sub/header";
+@import "sub/swiper";
+@import "sub/icons-row";
+@import "sub/cons";
+@import "sub/content";
+@import "sub/homepage-maincontent";
+@import "sub/apartaments-list";
+@import "sub/btn";
+@import "sub/contact-form";
+@import "sub/footer";
+@import "sub/scroll-gallery";
+
+img {
+  user-drag: none;
+  user-select: none;
+}
+
+.site-container{
+  width: 100%;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.sr-container{
+  max-width: 1410px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: 0 auto;
+  display: block;
+}
+
+.offset-img{
+  &.left img{
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+}
+
+img.border-radius{
+  border-radius: 1rem;
+}
+.page-main{
+  margin-top: 165px;
+}
+
+
+
+
+

@@ -1,0 +1,68 @@
+.homepage-baner{
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  &__title{
+    font-size: $font-big;
+  }
+  &__subtitle{
+    font-size: $font-big-smaller;
+  }
+  &__arrow{
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    pointer-events: none;
+    transition: all .3s ease-in-out;
+    &--text{
+      font-size: 16px;
+      font-weight: bold;
+      animation-name: bounce;
+      animation-timing-function: ease;
+      animation-duration: 1.5s;
+      animation-iteration-count: infinite;
+    }
+    &--svg{
+      fill: currentColor;
+      margin-top: 1.5rem;
+      height: 3em;
+    }
+    &--hidden{
+      bottom: 4rem;
+      opacity: 0;
+    }
+  }
+  &__img-wrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &--img{
+      min-height: 100%;
+      width: auto;
+    }
+  }
+}
+@keyframes bounce{
+  0%   { transform: translateY(0); }
+  30%  { transform: translateY(-15px); }
+  50%  { transform: translateY(0); }
+  100% { transform: translateY(0); }
+}

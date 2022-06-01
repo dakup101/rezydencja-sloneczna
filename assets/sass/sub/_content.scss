@@ -1,0 +1,24 @@
+.content{
+  & img{
+    width: 100%;
+  }
+  &__text{
+    font-size: $font-content;
+    & p{
+      font-weight: 300;
+    }
+    & strong{
+      font-weight: 600;
+    }
+  }
+  &__title{
+    font-size: $font-content-title;
+    font-weight: 300;
+    & p{
+      font-weight: inherit;
+    }
+    & strong{
+      font-weight: 600;
+    }
+  }
+}

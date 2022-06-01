@@ -1,0 +1,47 @@
+.site-footer{
+  color: $color-dark;
+  & .content__title{
+    font-weight: 500 !important;
+  }
+  & .content__text, & .content__text p{
+    font-weight: 400 !important;
+  }
+  &__sm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  & a{
+    color: inherit;
+    text-decoration: none;
+    transition: all .2s ease-in-out;
+    &:hover{
+      color: $color-green;
+    }
+  }
+  &__copyright{
+    border-top: 1px solid $color-gray;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &--pp{
+      transition: all .2s ease-in-out;
+      &:hover{
+        color: $color-green
+      }
+    }
+    &--everywhere{
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      align-items: center;
+    }
+    &--text{
+      margin-bottom: 0;
+    }
+  }
+  &__banner img{
+    width: 100%;
+  }
+}
