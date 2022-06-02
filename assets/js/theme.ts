@@ -1,5 +1,5 @@
 // On Load
-console.log('--- Page Loaded ---')
+console.log('--- Page loaded ---')
 
 import introAnimationHandle from "./sub/introAnimation-handle";
 import swiperHandle from "./sub/swiper-handle";
@@ -10,7 +10,7 @@ import scrollGalleryHandle from "./sub/scrollGallery-handle";
 // Rendered
 window.scrollTo(0, 0);
 window.addEventListener('DOMContentLoaded', () => {
-    console.log('--- Page Rendered ---')
+    console.log('--- Page rendered ---')
     introAnimationHandle();
     swiperHandle();
     let scroller = 0;
