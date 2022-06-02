@@ -1,6 +1,6 @@
 <?php
-$icons = get_field('icons_row_vertical');
-$icons_title = get_field('icons_row_title');
+$icons = get_field('icons_row_vertical', 23);
+$icons_title = get_field('icons_row_title', 23);
 ?>
 <h2 class="content__title my-5 pb-5 text-center"><?php echo $icons_title ?></h2>
 <div class="row icons-row horizontal">

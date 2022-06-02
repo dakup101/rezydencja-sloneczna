@@ -3,6 +3,12 @@
 <main class="page-main">
     <section class="apartament-filters">
         <div class="row mx-0 px-0">
+            <div class="col-12 col-md-10 offset-md-1">
+                <h1 class="content__title mb-5">Apartamenty</h1>
+
+            </div>
+        </div>
+        <div class="row mx-0 px-0">
             <div class="col-12 col-md-6 d-flex position-relative overflow-hidden">
                 <?php get_template_part('/components/component-canvas'); ?>
             </div>
@@ -172,5 +178,6 @@
             </div>
         </div>
     </section>
+    <?php get_template_part('/components/component-contact-form'); ?>
 </main>
 <?php get_footer(); ?>

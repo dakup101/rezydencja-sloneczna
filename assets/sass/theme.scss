@@ -50,6 +50,73 @@ img.border-radius{
 }
 
 
+.contact-page{
+  & h1 p{
+    font-size: 32px !important;
+    font-weight: 300 !important;
+  }
+  & .content__title p{
+    font-size: $font-content-bigger;
+    font-weight: 300;
+  }
+  & .content__text p{
+    font-size: $font-content-smaller;
+    font-weight: 300;
+  }
+  & a{
+    color: $color-green;
+    width: 100%;
+    display: block;
+    font-size: $font-content;
+    font-weight: bold;
+    text-decoration: none;
+    &:hover{
+      color: $color-green-dark;
+    }
+  }
+}
 
-
-
+.faq{
+  overflow: hidden;
+  margin-top: 1.5rem;
+  border-top: 1px solid gray;
+  color: $color-dark;
+  &-title{
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-top: 1.5rem;
+    padding-right: 2rem;
+    text-decoration: none;
+    font-size: $font-content;
+    font-weight: bold;
+    color: $color-dark;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    &:hover{
+      color: $color-green;
+    }
+    &:after{
+      content: '+';
+      font-size: 24px;
+      font-weight: bold;
+      color: $color-green;
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &.active{
+      &:after{
+        content: '-';
+      }
+    }
+  }
+  &-title.active + &-content{
+    margin-top: 1.5rem;
+  }
+&-content{
+  height: 0;
+  transition: all .2s ease-in-out;
+}
+}

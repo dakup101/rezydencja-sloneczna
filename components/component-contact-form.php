@@ -1,5 +1,5 @@
 <?php
-$cf = get_field('cf');
+$cf = get_field('cf', 'options');
 $title = $cf['title'];
 $subtitle = $cf['subtitle'];
 $shortcode = $cf['shortcode'];
