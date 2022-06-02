@@ -6,6 +6,22 @@
       <excludeFolder url="file://$MODULE_DIR$/.idea/sonarlint/issuestore/6" />
       <excludeFolder url="file://$MODULE_DIR$/.idea/sonarlint/issuestore/7" />
       <excludeFolder url="file://$MODULE_DIR$/.idea/sonarlint/issuestore/d" />
+      <excludeFolder url="file://$MODULE_DIR$/node_modules/css-loader" />
+      <excludeFolder url="file://$MODULE_DIR$/node_modules/cssesc" />
+      <excludeFolder url="file://$MODULE_DIR$/node_modules/dom7" />
+      <excludeFolder url="file://$MODULE_DIR$/node_modules/fsevents" />
+      <excludeFolder url="file://$MODULE_DIR$/node_modules/icss-utils" />
+      <excludeFolder url="file://$MODULE_DIR$/node_modules/nanoid" />
+      <excludeFolder url="file://$MODULE_DIR$/node_modules/postcss" />
+      <excludeFolder url="file://$MODULE_DIR$/node_modules/postcss-modules-extract-imports" />
+      <excludeFolder url="file://$MODULE_DIR$/node_modules/postcss-modules-local-by-default" />
+      <excludeFolder url="file://$MODULE_DIR$/node_modules/postcss-modules-scope" />
+      <excludeFolder url="file://$MODULE_DIR$/node_modules/postcss-modules-values" />
+      <excludeFolder url="file://$MODULE_DIR$/node_modules/postcss-selector-parser" />
+      <excludeFolder url="file://$MODULE_DIR$/node_modules/postcss-value-parser" />
+      <excludeFolder url="file://$MODULE_DIR$/node_modules/ssr-window" />
+      <excludeFolder url="file://$MODULE_DIR$/node_modules/style-loader" />
+      <excludeFolder url="file://$MODULE_DIR$/node_modules/swiper" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
