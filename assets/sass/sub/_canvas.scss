@@ -1,0 +1,87 @@
+.canvas{
+  position: absolute;
+  height: 100%;
+  width: 1115px;
+  left: 50%;
+  top: 50%;
+  z-index: 60;
+  transform: translateY(-50%) translateX(-50%);
+  & img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: 100%;
+    z-index: -1;
+    transform: translateY(-50%) translateX(-50%);
+  }
+  & svg{
+    z-index: 6000;
+    position: absolute;
+    height: auto;
+    pointer-events: none;
+    & path{
+      width: 100%;
+      height: auto;
+      pointer-events: all;
+      &:hover{
+        cursor: pointer;
+        fill-opacity: .9;
+      }
+    }
+  }
+  & #svg1{
+    top: 57% !important;
+    right: 11% !important;
+    width: 29%;
+  }
+  & #svg2 {
+    top: 42%;
+    right: 6%;
+    width: 43%;
+  }
+  & #svg3 {
+    top: 28.5%;
+    right: 28.8%;
+    width: 20%;
+  }
+  & #svg4 {
+    top: 33.6%;
+    right: 18.5%;
+    width: 9.5%;
+  }
+  & #svg5 {
+    top: 49.5%;
+    right: 6.3%;
+    width: 8%;
+  }
+  & #svg6 {
+    top: 15%;
+    right: 31%;
+    width: 14%;
+  }
+  & #svg7 {
+    top: 39%;
+    right: 7.4%;
+    width: 5.7%;
+  }
+  & #svg8 {
+    top: 42%;
+    left: 20%;
+    width: 22%;
+  }
+  & #svg9 {
+    top: 29.8%;
+    left: 20%;
+    width: 16%;
+  }
+  & #svg10 {
+    width: 9.4%;
+    left: 23%;
+    top: 16%;
+  }
+  &-wrapper{
+    overflow: hidden;
+    height: 100%;
+  }
+}

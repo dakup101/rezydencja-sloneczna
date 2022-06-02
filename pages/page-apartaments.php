@@ -3,10 +3,10 @@
 <main class="page-main">
     <section class="apartament-filters">
         <div class="row mx-0 px-0">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6 d-flex position-relative overflow-hidden">
                 <?php get_template_part('/components/component-canvas'); ?>
             </div>
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6 px-0">
                 <?php
                 $args = array(
                     'numberposts' => -1,
