@@ -2,48 +2,48 @@
     <?php wp_head(); ?>
     <div class="site-header" data-site_header>
         <div class="site-container">
-            <div class="site-header__logo">
+            <a href="<?php echo get_home_url() ?>" class="site-header__logo">
                 <img src="<?php echo THEME_URI . '/assets/images/logo_cropped.png' ?>"
                      alt="Słoneczna ezydencja - Logo"
                      class="site-header__logo--img"
                 >
-            </div>
+            </a>
             <nav class="site-header__nav">
-                <a href="#"
+                <a href="<?php echo get_home_url().'/o-inwestycji' ?>"
                    class="site-header__nav--item"
                 >
                     O inwestycji
                 </a>
-                <a href="#"
+                <a href="<?php echo get_home_url().'/apartaments' ?>"
                    class="site-header__nav--item"
                 >
                     Apartamenty
                 </a>
-                <a href="#"
+                <a href="<?php echo get_home_url().'/galeria' ?>"
                    class="site-header__nav--item"
                 >
                     Galeria
                 </a>
-                <a href="#"
+                <a href="<?php echo get_home_url().'/zwrot-vat' ?>"
                    class="site-header__nav--item"
                 >
                     Zwrot VAT
                 </a>
-                <a href="#"
+                <a href="<?php echo get_home_url().'/wynajem' ?>"
                    class="site-header__nav--item"
                 >
                     Wynajem
                 </a>
-                <a href="#"
+                <a href="<?php echo get_home_url().'/kontakt' ?>"
                    class="site-header__nav--item"
                 >
                     Kontakt
                 </a>
-                <a href="#"
-                   class="site-header__nav--item"
-                >
-                    Ulubione (0)
-                </a>
+<!--                <a href="#"-->
+<!--                   class="site-header__nav--item"-->
+<!--                >-->
+<!--                    Ulubione (0)-->
+<!--                </a>-->
                 <a href="#"
                    class="site-header__nav--fb"
                 >
