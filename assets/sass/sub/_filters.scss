@@ -205,7 +205,7 @@ input[type=range] {
       background: $color-green-dark;
     }
     @media screen and (max-width: 991px){
-      height: 500px;
+      height: fit-content;
     }
   }
   & .apartaments-list{
