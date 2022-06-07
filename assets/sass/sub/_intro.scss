@@ -48,6 +48,16 @@
       &.remove{
         transform: translateX(-50%) translateY(-100%);
       }
+      @media screen and (max-width: 1400px){
+        &{
+          font-size: 56px;
+        }
+      }
+      @media screen and (max-width: 991px){
+        &{
+          font-size: 26px;
+        }
+      }
     }
 
   }
@@ -60,6 +70,18 @@
       height: 800px;
       position: absolute;
       z-index: 25;
+      @media screen and (max-width: 1240px){
+        &{
+          width: 568px;
+          height: 568px;
+        }
+      }
+      @media screen and (max-width: 991px){
+        &{
+          width: 280px;
+          height: 280px;
+        }
+      }
     }
     &--content{
       position: relative;

@@ -59,6 +59,32 @@
       min-width: 100%;
     }
   }
+  @media(max-width: 1240px){
+    &__title{
+      font-size: $font-xl-big;
+    }
+    &__subtitle{
+      font-size: $font-big-xl-smaller;
+    }
+    &__img-wrapper{
+      width: fit-content;
+      &--img{
+        min-height: 100%;
+        width: auto;
+      }
+    }
+
+  }
+  @media(max-width: 991px){
+    &__title{
+      font-size: $font-big-lg-smaller;
+      text-shadow: 0 0 15px rgba(0,0,0,.2);
+    }
+    &__subtitle{
+      font-size: $font-lg-title;
+      text-shadow: 0 0 15px rgba(0,0,0,.2);
+    }
+  }
 }
 @keyframes bounce{
   0%   { transform: translateY(0); }

@@ -29,4 +29,9 @@ window.addEventListener('DOMContentLoaded', () => {
     scrollGalleryHandle();
     faqHandle();
     manageFiltersHandle()
+
+    let mobileNavTrigger = document.getElementById('mobileMenu');
+    mobileNavTrigger.addEventListener('change', ()=>{
+        document.querySelector('[data-site_header]').classList.toggle('darken')
+    })
 });

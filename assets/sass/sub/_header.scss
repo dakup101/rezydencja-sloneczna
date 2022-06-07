@@ -8,6 +8,10 @@
   z-index: 300;
   padding: 2rem 0;
   background: linear-gradient(180deg, rgba(51, 51, 51, 0.6) 0%, rgba(255, 255, 255, 0) 100%);
+  &.darken{
+    background: rgba(0,0,0,.8) !important;
+    backdrop-filter: blur(5px);
+  }
   & .site-container{
     display: flex;
     justify-content: space-between;
@@ -39,7 +43,7 @@
         width: 100%;
         height: 100%;
         z-index: -1;
-        left: -120;
+        right: 100%;
         bottom: 0;
         position: absolute;
         transition: all .3s ease-in-out;
@@ -47,7 +51,7 @@
       &:hover{
         color: white;
         &:before{
-          left: 0;
+          right: 0;
         }
       }
     }
@@ -80,6 +84,25 @@
         height: 1em;
       }
     }
+    @media screen and (max-width: 1600px){
+      &{
+        gap: 2rem;
+        flex-wrap: wrap;
+      }
+    }
+    @media screen and (max-width: 1400px){
+      &{
+        gap: 1rem;
+      }
+      &--btn{
+        padding: .7rem 1.5rem;
+      }
+    }
+    @media screen and (max-width: 1240px){
+      &{
+        display: none;
+      }
+    }
   }
   &.page-header{
     background: white;
@@ -107,5 +130,71 @@
         height: 60px;
       }
     }
+  }
+  &__nav-mobile{
+    display: none;
+    height: 0;
+    overflow: hidden;
+    transition: all .3s ease-in-out;
+    @media screen and (max-width: 1240px){
+      &{
+        overflow: hidden;
+        transition: all .3s ease-in-out;
+        display: flex;
+        width: 100%;
+        &.site-container{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
+#mobileMenu{
+  display: none;
+  & + div{
+    transition: all .1s ease-in-out;
+    height: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    font-size: 18px;
+    & .site-header__nav{
+      &--item{
+        width: 100%;
+        text-align: center;
+        overflow: hidden;
+        padding-bottom: 0;
+        padding-top: 10px;
+        margin-top: 10px;
+        border-top: 1px solid #424242;
+        &:last-child{
+          border-bottom: none !important;
+        }
+        &:before{
+          content: none;
+          display: none !important;
+        }
+      }
+    }
+  }
+  &:checked + div{
+    height: 385px;
+    transition: all .1s ease-in-out;
+  }
+}
+label[for="mobileMenu"]{
+  display: none;
+}
+@media(max-width: 1240px){
+  .site-header__logo--img{
+    height: 65px;
+  }
+  label[for="mobileMenu"]{
+    display: block;
   }
 }

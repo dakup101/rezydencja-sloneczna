@@ -1,14 +1,31 @@
 @import url("https://use.typekit.net/zur8qmm.css");
 
 $font-big: 80px;
-
-
 $font-big-smaller: 60px;
 $font-title: 48px;
 $font-content-title: 36px;
 $font-content: 20px;
 $font-content-bigger: 24px;
 $font-content-smaller: 18px;
+
+//Font @media < 1600
+$font-xl-big: 70px;
+$font-big-xl-smaller: 50px;
+$font-xl-title: 38px;
+$font-xl-content-title: 30px;
+$font-xl-content: 18px;
+$font-xl-content-bigger: 22px;
+$font-xl-content-smaller: 16px;
+
+//Font @media < 1400
+$font-lg-big: 60px;
+$font-big-lg-smaller: 45px;
+$font-lg-title: 32px;
+$font-lg-content-title: 28px;
+$font-lg-content: 16px;
+$font-lg-content-bigger: 20px;
+$font-lg-content-smaller: 14px;
+
 *{
   line-height: 150%;
   font-family: greycliff-cf, sans-serif;
