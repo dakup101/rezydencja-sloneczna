@@ -1,11 +1,14 @@
-import exports from "webpack";
-import keepOriginalOrder = exports.util.comparators.keepOriginalOrder;
 import makeHTMLtableRow from "./makeHTMLtableRow";
-import apartamentTableSort from "./apartamentTableSort";
 import makeHTMLcards from "./makeHTMLcards";
 
 export default function manageFilters() {
     console.log('--- Manage Filters loaded ---')
+
+    const is_prod = true;
+    const is_demo = true;
+
+    let loaders = document.querySelectorAll('[data-overlay]');
+
     let mode = 0;
     let status = 'all';
     let meters = {
@@ -20,6 +23,19 @@ export default function manageFilters() {
         lowerVal: null,
         upperVal: null
     }
+    let canvases = document.querySelectorAll('[data-canvas_floor]');
+    for(let canvas of canvases){
+        canvas.addEventListener('click', e => {
+            let target = e.currentTarget as HTMLElement;
+            console.log(target);
+            let theFloor = parseInt( target.dataset.canvas_floor);
+            floors.lowerVal = theFloor;
+            floors.upperVal = theFloor;
+            console.log(floors)
+            makeSearch();
+        })
+    }
+
     let statusSwitchers = document.querySelectorAll('[data-status]');
     for(let switcher of statusSwitchers){
         switcher.addEventListener('click', e => {
@@ -111,14 +127,26 @@ export default function manageFilters() {
 
     function makeSearch() {
         console.log('--- Search Apartaments ---');
-        let loaders = document.querySelectorAll('[data-overlay]');
+
         document.querySelector('[data-sort_table]').innerHTML = '';
         for (let loader of loaders){
             loader.classList.add('active');
         }
-        let ajaxUrl = '/apartamenty/wp-admin/admin-ajax.php';
+
+        let ajaxUrl = "/rz-prod/wp-admin/admin-ajax.php"
+        if (is_prod){
+            ajaxUrl="/wp-admin/admin-ajax.php"
+            if (is_demo){
+                ajaxUrl="/www/rz/wp-admin/admin-ajax.php"
+            }
+        }
+        console.log(ajaxUrl);
+        let ajaxNonce = (document.getElementById('nonce') as HTMLInputElement).value;
         const data = new FormData();
+        let fethcResult;
+        let fetchSuccess = false;
         data.append("action", "search_apartaments");
+        data.append("nonce", ajaxNonce)
         data.append("floors_upper", floors.upperVal)
         data.append("floors_lower", floors.lowerVal)
         data.append("rooms_upper", rooms.upperVal)
@@ -132,51 +160,91 @@ export default function manageFilters() {
             credentials: 'same-origin'
         })
             .then(response => response.json())
-            .then(json => {
-                let result = json;
-                document.querySelector('[data-found_amount]').innerHTML = result.length
-                if (mode == 0){
-                    document.querySelector('[data-table]').classList.add('active');
-                    document.querySelector('[data-cards]').classList.remove('active');
-
-                    for (let item of result) {
-                        document.querySelector('[data-sort_table]').innerHTML+=makeHTMLtableRow(
-                            item.meters.toString(),
-                            item.rooms.toString(),
-                            item.floor.toString(),
-                            item.price_meter.toString(),
-                            item.price.toString(),
-                            item.number.toString(),
-                            item.status.toString(),
-                            item.file.toString()
-                        )
-                    }
-                }
-                else{
-                    document.querySelector('[data-table]').classList.remove('active');
-                    document.querySelector('[data-cards]').classList.add('active');
-                    document.querySelector('[data-cards]').innerHTML='';
-                    for (let item of result) {
-                        document.querySelector('[data-cards]').innerHTML+=makeHTMLcards(
-                            item.meters.toString(),
-                            item.rooms.toString(),
-                            item.floor.toString(),
-                            item.price_meter.toString(),
-                            item.price.toString(),
-                            item.number.toString(),
-                            item.status.toString(),
-                            item.file.toString(),
-                            item.project.toString()
-                        )
-                    }
-                }
-
-                setTimeout(()=>{
-                    for (let loader of loaders){
-                        loader.classList.remove('active');
-                    }
-                },1000)
+            .then(response =>{
+                fethcResult = response;
+                fetchSuccess = true;
+                render_result(fethcResult, fetchSuccess);
+                console.log(response)
             })
+    }
+    document.querySelector('[data-filter_rest]').addEventListener('click', resetData);
+
+
+    function resetData(){
+        for (let multiRange of multiRanges) {
+            let lower = multiRange.querySelector('[data-lower]') as HTMLInputElement;
+            let upper = multiRange.querySelector('[data-upper]') as HTMLInputElement;
+            lower.value = lower.min;
+            upper.value = upper.max;
+            let lefty = multiRange.querySelector('[data-min]') as HTMLElement;
+            let righty = multiRange.querySelector('[data-max]') as HTMLElement;
+            let lowerValue = parseInt(lower.value);
+            let upperValue = parseInt(upper.value);
+            let range = upperValue - lowerValue;
+            manageRange(parseInt(lower.dataset.type), lowerValue, upperValue);
+            stepper(righty, upperValue, 0, 0, range);
+            stepper(lefty, lowerValue, 1, 0, range);
+        }
+        (document.querySelector('[data-status="all"]') as HTMLAnchorElement).click();
+    }
+
+
+    function render_result(result, success){
+        document.querySelector('[data-no_result]').classList.add('hidden');
+        document.querySelector('[data-cards]').classList.remove('active');
+        document.querySelector('[data-table]').classList.remove('active');
+        document.querySelector('[data-cards]').innerHTML='';
+        if (success && result.length>0){
+            console.log(result);
+            document.querySelector('[data-found_amount]').innerHTML = result.length
+            if (mode == 0){
+                document.querySelector('[data-table]').classList.add('active');
+                for (let item of result){
+                    document.querySelector('[data-sort_table]').innerHTML+=makeHTMLtableRow(
+                        item.meters.toString(),
+                        item.rooms.toString(),
+                        item.floor.toString(),
+                        item.price_meter.toString(),
+                        item.price.toString(),
+                        item.number.toString(),
+                        item.status.toString(),
+                        item.file.toString()
+                    )
+                }
+            }
+            else{
+                document.querySelector('[data-cards]').classList.add('active');
+                for (let item of result){
+                    document.querySelector('[data-cards]').innerHTML+=makeHTMLcards(
+                        item.meters.toString(),
+                        item.rooms.toString(),
+                        item.floor.toString(),
+                        item.price_meter.toString(),
+                        item.price.toString(),
+                        item.number.toString(),
+                        item.status.toString(),
+                        item.file.toString(),
+                        item.project.toString()
+                    )
+                }
+            }
+
+            setTimeout(()=>{
+                for (let loader of loaders){
+                    loader.classList.remove('active');
+                }
+            },1000)
+        }
+        else{
+            document.querySelector('[data-table]').classList.remove('active');
+            document.querySelector('[data-cards]').classList.remove('active');
+            document.querySelector('[data-no_result]').classList.remove('hidden');
+            setTimeout(()=>{
+                for (let loader of loaders){
+                    loader.classList.remove('active');
+                }
+            },500)
+        }
     }
 
     function stepper(target: HTMLElement, value: number, direction: number, steps: number, range: number) {

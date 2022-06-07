@@ -16,7 +16,7 @@
   &__logo{
     z-index: 301;
     &--img{
-      height: 100px;
+      height: 90px;
       transition: all .2s ease-in-out;
     }
   }
@@ -29,11 +29,36 @@
     &--item{
       color: inherit;
       text-decoration: none;
+      position: relative;
+      overflow: hidden;
+      padding: 7px;
+      transition: all .2s ease-in-out;
+      &:before{
+        content: '';
+        background: $color-green;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        left: -120;
+        bottom: 0;
+        position: absolute;
+        transition: all .3s ease-in-out;
+      }
+      &:hover{
+        color: white;
+        &:before{
+          left: 0;
+        }
+      }
     }
     &--fb{
       width: 1.5em;
       color: white;
       fill: currentColor;
+      transition: all .2s ease-in-out;
+      &:hover{
+        fill: $color-green;
+      }
     }
     &--btn{
       padding: 1rem 2rem;
@@ -46,6 +71,11 @@
       text-transform: uppercase;
       border-radius: 1000px;
       color: $color-dark;
+      transition: all .2s ease-in-out;
+      &:hover{
+        background: $color-green-dark;
+        color: white;
+      }
       &__icon{
         height: 1em;
       }

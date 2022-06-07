@@ -10,6 +10,12 @@
     & strong{
       font-weight: 600;
     }
+    & a{
+      color: $color-green;
+      &:hover{
+        color: $color-green-dark;
+      }
+    }
   }
   &__title{
     font-size: $font-content-title;
@@ -21,4 +27,8 @@
       font-weight: 600;
     }
   }
+}
+
+h1.content__title{
+  font-size: $font-big-smaller;
 }

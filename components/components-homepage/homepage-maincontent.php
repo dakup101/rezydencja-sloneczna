@@ -15,16 +15,18 @@ $img_right = $mc['img_right'];
                     <div class="offset-img left">
                         <img src="<?php echo $offset_img ?>"
                              alt="Rezydencja Słoneczna"
+                             loading="lazy"
                         >
                     </div>
                 </div>
                 <div class="col-12 col-md-10 offset-md-2">
-                    <div class="content__text my-5">
+                    <div class="content__text my-5 py-5">
                         <?php echo $text_left ?>
                     </div>
                     <img src="<?php echo $img_left ?>"
                          alt="Słoneczna Rezydencja"
                          class="border-radius"
+                         loading="lazy"
                     >
                 </div>
             </div>
@@ -35,12 +37,13 @@ $img_right = $mc['img_right'];
                     <h2 class="content__title">
                         <?php echo $title_right; ?>
                     </h2>
-                    <div class="content__text my-5">
+                    <div class="content__text my-5 mb-5">
                         <?php echo $text_right; ?>
                     </div>
                     <img src="<?php echo $img_right ?>"
                          alt="Białka Tatrzańska - Rezydencja"
                          class="border-radius"
+                         loading="lazy"
                     >
                 </div>
             </div>
@@ -54,6 +57,7 @@ $img_right = $mc['img_right'];
     <img src="<?php echo THEME_URI.'/assets/images/svg/tree-bg.svg'; ?>"
          alt="Tree background"
          class="homepage-maincontent__bg"
+         loading="lazy"
     >
 </section>
 

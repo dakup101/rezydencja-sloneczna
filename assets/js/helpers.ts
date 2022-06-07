@@ -1,3 +1,3 @@
 export default {
-    scroller: 0
+    is_prod: false
 }

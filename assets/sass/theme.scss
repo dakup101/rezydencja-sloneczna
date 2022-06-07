@@ -51,18 +51,6 @@ img.border-radius{
 
 
 .contact-page{
-  & h1 p{
-    font-size: 32px !important;
-    font-weight: 300 !important;
-  }
-  & .content__title p{
-    font-size: $font-content-bigger;
-    font-weight: 300;
-  }
-  & .content__text p{
-    font-size: $font-content-smaller;
-    font-weight: 300;
-  }
   & a{
     color: $color-green;
     width: 100%;
@@ -119,4 +107,12 @@ img.border-radius{
   height: 0;
   transition: all .2s ease-in-out;
 }
+}
+
+.bg-gray-light{
+  background: $color-gray-ligher;
+}
+
+.map iframe{
+  width: 100% !important;
 }

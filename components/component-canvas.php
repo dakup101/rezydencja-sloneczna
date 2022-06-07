@@ -3,13 +3,17 @@
             <img src="<?php echo THEME_URI . '/assets/images/canvas.png' ?>" alt="">
 
             <!-- parter prawo dół -->
-            <svg id="svg1" mlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 323.25 110.25">
+            <svg id="svg1"
+                 data-canvas_floor="0"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                 viewBox="0 0 323.25 110.25">
                 <path fill-rule="evenodd" stroke="rgb(87, 188, 14)" stroke-width="1.5px" stroke-linecap="round"
                       stroke-linejoin="round" fill-opacity="0.502" opacity="0.749" fill="rgb(87, 188, 14)"
                       d="M2.77,1.781 L3.105,60.414 L320.858,107.731 L320.858,67.614 L2.77,1.781 Z"/>
             </svg>
             <!-- 1 piętro prawo centrum -->
             <svg    id="svg2"
+                    data-canvas_floor="1"
                     xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink"
                     viewBox="0 0 478.25 174.25">
@@ -19,6 +23,7 @@
             </svg>
             <!-- 2 piętro prawo góra 1 -->
             <svg    id="svg3"
+                    data-canvas_floor="2"
                     xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink"
                     viewBox="0 0 221.25 142.25">
@@ -28,6 +33,7 @@
             </svg>
             <!-- 2 piętro prawo góra 2 -->
             <svg    id="svg4"
+                    data-canvas_floor="2"
                     xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink"
                     viewBox="0 0 106.25 152.25">
@@ -37,6 +43,7 @@
             </svg>
             <!-- 2 piętro prawo góra 3 -->
             <svg id="svg5"
+                 data-canvas_floor="2"
                     xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink"
                  viewBox="0 0 90.25 75.25">
@@ -46,6 +53,7 @@
             </svg>
             <!-- 3 piętro prawo góra 1 -->
             <svg id="svg6"
+                 data-canvas_floor="3"
                     xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink"
                  viewBox="0 0 158.25 161.25">
@@ -55,6 +63,7 @@
             </svg>
             <!-- 3 piętro prawo góra 3 -->
             <svg    id="svg7"
+                    data-canvas_floor="3"
                     xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink"
                     viewBox="0 0 62.5 93.5">
@@ -64,6 +73,7 @@
             </svg>
             <!-- 1 piętro lewo dół -->
             <svg    id="svg8"
+                    data-canvas_floor="1"
                     xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink"
                     viewBox="0 0 244.25 123.25">
@@ -73,6 +83,7 @@
             </svg>
             <!-- 2 piętro lewo środek -->
             <svg    id="svg9"
+                    data-canvas_floor="2"
                     xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink"
                     viewBox="0 0 170.25 145.25">
@@ -82,6 +93,7 @@
             </svg>
             <!-- 3 piętro lewo góra -->
             <svg    id="svg10"
+                    data-canvas_floor="3"
                     xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink"
                     viewBox="0 0 106.25 162.25">

@@ -19,6 +19,7 @@ $offer = get_field('oferta', 'options');
                             <img src="<?php echo $el['icon']; ?>"
                                  alt="<?php echo $el['text'] ?>"
                                  class="cons__item--icon"
+                                 loading="lazy"
                             >
                             <div class="cons__item--text">
                                 <?php echo $el['text'] ?>

@@ -30,6 +30,7 @@
       }
     }
     &-slide-next + &-slide{
+      background: red !important;
       width: 35% !important;
       & .swiper-slide__inner{
         height: 500px;

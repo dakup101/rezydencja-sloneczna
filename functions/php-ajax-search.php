@@ -1,6 +1,6 @@
 <?php
 add_action('wp_ajax_search_apartaments', 'ajax_apartaments');
-add_action('wp_ajax_nopriv_search_apartamenst', 'ajax_apartaments');
+add_action('wp_ajax_nopriv_search_apartaments', 'ajax_apartaments');
 
 function ajax_apartaments(){
     $args = array(

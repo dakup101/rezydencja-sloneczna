@@ -16,8 +16,8 @@ input[type=range] {
     outline: none;
   }
   &::-webkit-slider-thumb {
-    height: 18px;
-    width: 18px;
+    height: 22px;
+    width: 22px;
     border-radius: 28px;
     background-color: white;
     border: 1px solid #b8c6d1;
@@ -116,6 +116,7 @@ input[type=range] {
   }
   &__sliders{
     padding: 1rem 2rem;
+    padding-bottom: 0;
     display: grid;
     grid-template-columns: 3fr 1fr 2fr;
     gap: 2rem;
@@ -350,4 +351,8 @@ input[type=range] {
       }
     }
   }
+}
+
+.search-info.hidden{
+  display: none !important;
 }

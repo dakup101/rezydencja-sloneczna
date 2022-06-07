@@ -9,5 +9,13 @@
     <?php get_template_part('/components/component-swiper'); ?>
     <?php get_template_part('/components/component-some-apartaments-list'); ?>
     <?php get_template_part('/components/component-contact-form'); ?>
+    <style>
+        .swiper-slide-next + .swiper-slide{
+            width: 35% !important;
+        }
+        .swiper-slide-next + .swiper-slide .swiper-slide__inner{
+            height: 500px;
+        }
+    </style>
 </main>
 <?php get_footer(); ?>

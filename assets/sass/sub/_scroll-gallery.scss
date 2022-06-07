@@ -2,7 +2,7 @@
   &__wrapper{
     overflow: hidden;
     width: 100%;
-    height: 60vh;
+    height: 55vh;
     position: relative;
   }
   &__img{
@@ -15,10 +15,10 @@
   }
   & .swiper{
     &-wrapper{
-      height: 60vh;
+      height: 55vh;
     }
     &-slide{
-      height: 60vh;
+      height: 55vh;
     }
   }
 }

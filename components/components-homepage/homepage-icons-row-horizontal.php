@@ -7,7 +7,11 @@ $icons_title = get_field('icons_row_title', 23);
     <?php foreach ($icons as $el) : ?>
     <div class="col-6 col-md-4">
         <div class="icons-row__wrapper">
-            <img src="<?php echo $el['icon']; ?>" alt="<?php echo $el['title'] ?>" class="icons-row__icon">
+            <img src="<?php echo $el['icon']; ?>"
+                 alt="<?php echo $el['title'] ?>"
+                 class="icons-row__icon"
+                 loading="lazy"
+            >
             <div class="icons-row__content">
                 <div class="icons-row__content--title">
                     <?php echo $el['title'] ?>

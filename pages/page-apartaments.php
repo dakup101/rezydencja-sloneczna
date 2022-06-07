@@ -41,6 +41,7 @@
                 $max_room = $rooms[sizeof($rooms) - 1];
                 ?>
                 <form class="filters w-100">
+                    <input type="hidden" name="nonce" id="nonce" value="<?php echo wp_create_nonce('search_apartaments') ?>">
                     <div class="filters__header">
                         Rezydencja słoneczna
                     </div>
@@ -170,6 +171,10 @@
                     <?php get_template_part('/components/component-apartaments-table'); ?>
                     <div class="apartaments-cards" data-cards>
 
+                    </div>
+                    <div class="search-info text-center p-5 hidden d-flex flex-column" data-no_result>
+                        <h3 class="content__text fw-bold mb-3">Brak Wyników</h3>
+                        <p>Spróbuj inną konfigurację</p>
                     </div>
                     <div class="loader-overlay" data-overlay>
                         <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>

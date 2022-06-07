@@ -13,7 +13,7 @@ $img = $baner['img'];
         <img src="<?php echo $img; ?>"
              alt="<?php echo $title; ?>"
              class="homepage-baner__img-wrapper--img"
-             lazyload
+             loading="lazy"
         >
     </div>
     <div class="homepage-baner__arrow text-white"
