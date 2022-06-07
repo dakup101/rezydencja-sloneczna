@@ -8,41 +8,41 @@
                 >
             </a>
             <nav class="site-header__nav">
-                <a href="<?php echo get_home_url().'/o-inwestycji' ?>"
+                <a href="<?php echo get_home_url() . '/o-inwestycji' ?>"
                    class="site-header__nav--item"
                 >
                     O inwestycji
                 </a>
-                <a href="<?php echo get_home_url().'/apartaments' ?>"
+                <a href="<?php echo get_home_url() . '/apartaments' ?>"
                    class="site-header__nav--item"
                 >
                     Apartamenty
                 </a>
-                <a href="<?php echo get_home_url().'/galeria' ?>"
+                <a href="<?php echo get_home_url() . '/galeria' ?>"
                    class="site-header__nav--item"
                 >
                     Galeria
                 </a>
-                <a href="<?php echo get_home_url().'/zwrot-vat' ?>"
+                <a href="<?php echo get_home_url() . '/zwrot-vat' ?>"
                    class="site-header__nav--item"
                 >
                     Zwrot VAT
                 </a>
-                <a href="<?php echo get_home_url().'/wynajem' ?>"
+                <a href="<?php echo get_home_url() . '/wynajem' ?>"
                    class="site-header__nav--item"
                 >
                     Wynajem
                 </a>
-                <a href="<?php echo get_home_url().'/kontakt' ?>"
+                <a href="<?php echo get_home_url() . '/kontakt' ?>"
                    class="site-header__nav--item"
                 >
                     Kontakt
                 </a>
-<!--                <a href="#"-->
-<!--                   class="site-header__nav--item"-->
-<!--                >-->
-<!--                    Ulubione (0)-->
-<!--                </a>-->
+                <!--                <a href="#"-->
+                <!--                   class="site-header__nav--item"-->
+                <!--                >-->
+                <!--                    Ulubione (0)-->
+                <!--                </a>-->
                 <a href="#"
                    class="site-header__nav--fb"
                 >
@@ -53,7 +53,8 @@
                 <a href="#"
                    class="site-header__nav--btn"
                 >
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.13 19.13" class="site-header__nav--btn__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.13 19.13"
+                         class="site-header__nav--btn__icon">
                         <defs>
                             <style>.b {
                                     fill: none;
@@ -71,8 +72,10 @@
                 </a>
             </nav>
             <label for="mobileMenu" style="color: white">
-                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-list"
+                     viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                          d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
                 </svg>
             </label>
 
@@ -80,32 +83,32 @@
         <input type="checkbox" name="mobileMenu" id="mobileMenu">
         <div class="site-header__nav-mobile site-container">
             <div class="py-4 d-flex flex-column w-100">
-                <a href="<?php echo get_home_url().'/o-inwestycji' ?>"
+                <a href="<?php echo get_home_url() . '/o-inwestycji' ?>"
                    class="site-header__nav--item"
                 >
                     O inwestycji
                 </a>
-                <a href="<?php echo get_home_url().'/apartaments' ?>"
+                <a href="<?php echo get_home_url() . '/apartaments' ?>"
                    class="site-header__nav--item"
                 >
                     Apartamenty
                 </a>
-                <a href="<?php echo get_home_url().'/galeria' ?>"
+                <a href="<?php echo get_home_url() . '/galeria' ?>"
                    class="site-header__nav--item"
                 >
                     Galeria
                 </a>
-                <a href="<?php echo get_home_url().'/zwrot-vat' ?>"
+                <a href="<?php echo get_home_url() . '/zwrot-vat' ?>"
                    class="site-header__nav--item"
                 >
                     Zwrot VAT
                 </a>
-                <a href="<?php echo get_home_url().'/wynajem' ?>"
+                <a href="<?php echo get_home_url() . '/wynajem' ?>"
                    class="site-header__nav--item"
                 >
                     Wynajem
                 </a>
-                <a href="<?php echo get_home_url().'/kontakt' ?>"
+                <a href="<?php echo get_home_url() . '/kontakt' ?>"
                    class="site-header__nav--item"
                 >
                     Kontakt
@@ -113,7 +116,8 @@
                 <a href="#"
                    class="site-header__nav--btn w-50 m-auto mt-4"
                 >
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.13 19.13" class="site-header__nav--btn__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.13 19.13"
+                         class="site-header__nav--btn__icon">
                         <defs>
                             <style>.b {
                                     fill: none;

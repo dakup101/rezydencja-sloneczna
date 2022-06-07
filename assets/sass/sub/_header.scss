@@ -12,6 +12,10 @@
     background: rgba(0,0,0,.8) !important;
     backdrop-filter: blur(5px);
   }
+  &.page-header.darken{
+    background: rgba(255,255,255,.7) !important;
+    backdrop-filter: blur(5px);
+  }
   & .site-container{
     display: flex;
     justify-content: space-between;
@@ -117,6 +121,11 @@
       &--fb{
         color: $color-brown;
       }
+    }
+  }
+  &.page-header{
+    & label{
+      color: $color-brown;
     }
   }
 }

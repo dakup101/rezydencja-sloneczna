@@ -25,6 +25,21 @@ export default function initSwiper(){
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            1240 : {
+                slidesPerView: 4,
+                initialSlide: 2,
+                spaceBetween: 25,
+            },
+            991: {
+                slidesPerView: 3,
+                initialSlide: 1
+            },
+            320: {
+                slidesPerView: 1,
+                initialSlide: 1
+            }
         }
     });
     // Methods

@@ -5,9 +5,15 @@
       align-items: center;
       gap: 2rem;
       margin-bottom: 2.5rem;
+      @media screen and (max-width: 991px){
+        flex-direction: column;
+      }
     }
     &__icon{
       width: 75px;
+      @media screen and (max-width: 991px){
+        width: 50px;
+      }
     }
     &__content{
       display: flex;
@@ -20,6 +26,19 @@
       }
       &--text{
         font-size: $font-content;
+      }
+      @media screen and (max-width: 991px){
+        &{
+          text-align: center;
+          justify-content: center;
+          align-items: center;
+          &--title{
+            font-size: $font-lg-content-bigger;
+          }
+          &--content{
+            font-size: $font-lg-content;
+          }
+        }
       }
     }
   }

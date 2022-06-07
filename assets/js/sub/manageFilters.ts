@@ -4,8 +4,8 @@ import makeHTMLcards from "./makeHTMLcards";
 export default function manageFilters() {
     console.log('--- Manage Filters loaded ---')
 
-    const is_prod = true;
-    const is_demo = true;
+    const is_prod = false;
+    const is_demo = false;
 
     let loaders = document.querySelectorAll('[data-overlay]');
 

@@ -27,4 +27,17 @@
       transform: translateX(-50%);
     }
   }
+  @media screen and (max-width: 991px){
+    &{
+      &__item{
+        margin-bottom: 2rem;
+        align-items: center;
+        justify-content: flex-start;
+        &--text{
+          font-size: $font-lg-content-bigger;
+        }
+      }
+    }
+
+  }
 }

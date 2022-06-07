@@ -44,6 +44,14 @@
       font-size: $font-lg-content-title;
     }
   }
+  @media screen and (max-width: 991px){
+    &__text{
+      font-size: $font-sm-content;
+    }
+    &__title{
+      font-size: $font-sm-content-title;
+    }
+  }
 }
 
 h1.content__title{

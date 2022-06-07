@@ -4,13 +4,13 @@ $slides = get_field('slider');
 
 <?php if (!empty($slides)) : ?>
     <!-- Slider main container -->
-    <section class="offer-slider my-5">
+    <section class="offer-slider my-3 mb-5 my-md-5">
         <div class="swiper">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
                 <!-- Slides -->
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
+                <div class="swiper-slide d-none d-md-block"></div>
+                <div class="swiper-slide d-none d-md-block"></div>
                 <?php foreach ($slides as $el) : ?>
                     <div class="swiper-slide">
                         <div class="swiper-slide__inner">
@@ -21,7 +21,7 @@ $slides = get_field('slider');
                         </div>
                     </div>
                 <?php endforeach; ?>
-                <div class="swiper-slide"></div>
+                <div class="swiper-slide d-none d-md-block"></div>
             </div>
             <!-- If we need navigation buttons -->
             <div class="swiper-button__wrapper">

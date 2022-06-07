@@ -10,11 +10,19 @@
     <?php get_template_part('/components/component-some-apartaments-list'); ?>
     <?php get_template_part('/components/component-contact-form'); ?>
     <style>
-        .swiper-slide-next + .swiper-slide{
-            width: 35% !important;
+        @media screen and (min-width: 1240px){
+            .swiper-slide-next + .swiper-slide{
+                width: 35% !important;
+            }
+            .swiper-slide-next + .swiper-slide .swiper-slide__inner{
+                height: 500px;
+            }
         }
-        .swiper-slide-next + .swiper-slide .swiper-slide__inner{
-            height: 500px;
+        @media screen and (max-width: 991px){
+            .swiper-slide{
+                height: 300px;
+                padding: 1rem;
+            }
         }
     </style>
 </main>

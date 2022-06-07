@@ -1,5 +1,4 @@
 <header>
-    <?php wp_head(); ?>
     <div class="site-header page-header" data-site_header>
         <div class="site-container">
             <a href="<?php echo get_home_url() ?>" class="site-header__logo">
@@ -9,41 +8,41 @@
                 >
             </a>
             <nav class="site-header__nav">
-                <a href="<?php echo get_home_url().'/o-inwestycji' ?>"
+                <a href="<?php echo get_home_url() . '/o-inwestycji' ?>"
                    class="site-header__nav--item"
                 >
                     O inwestycji
                 </a>
-                <a href="<?php echo get_home_url().'/apartaments' ?>"
+                <a href="<?php echo get_home_url() . '/apartaments' ?>"
                    class="site-header__nav--item"
                 >
                     Apartamenty
                 </a>
-                <a href="<?php echo get_home_url().'/galeria' ?>"
+                <a href="<?php echo get_home_url() . '/galeria' ?>"
                    class="site-header__nav--item"
                 >
                     Galeria
                 </a>
-                <a href="<?php echo get_home_url().'/zwrot-vat' ?>"
+                <a href="<?php echo get_home_url() . '/zwrot-vat' ?>"
                    class="site-header__nav--item"
                 >
                     Zwrot VAT
                 </a>
-                <a href="<?php echo get_home_url().'/wynajem' ?>"
+                <a href="<?php echo get_home_url() . '/wynajem' ?>"
                    class="site-header__nav--item"
                 >
                     Wynajem
                 </a>
-                <a href="<?php echo get_home_url().'/kontakt' ?>"
+                <a href="<?php echo get_home_url() . '/kontakt' ?>"
                    class="site-header__nav--item"
                 >
                     Kontakt
                 </a>
-<!--                <a href="#"-->
-<!--                   class="site-header__nav--item"-->
-<!--                >-->
-<!--                    Ulubione (0)-->
-<!--                </a>-->
+                <!--                <a href="#"-->
+                <!--                   class="site-header__nav--item"-->
+                <!--                >-->
+                <!--                    Ulubione (0)-->
+                <!--                </a>-->
                 <a href="#"
                    class="site-header__nav--fb"
                 >
@@ -54,7 +53,8 @@
                 <a href="#"
                    class="site-header__nav--btn"
                 >
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.13 19.13" class="site-header__nav--btn__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.13 19.13"
+                         class="site-header__nav--btn__icon">
                         <defs>
                             <style>.b {
                                     fill: none;
@@ -71,6 +71,67 @@
                     <span class="site-header__nav--btn__text">Zadzwoń</span>
                 </a>
             </nav>
+            <label for="mobileMenu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-list"
+                     viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                          d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                </svg>
+            </label>
         </div>
-    </div>
+        <input type="checkbox" name="mobileMenu" id="mobileMenu">
+        <div class="site-header__nav-mobile site-container">
+            <div class="py-4 d-flex flex-column w-100">
+                <a href="<?php echo get_home_url() . '/o-inwestycji' ?>"
+                   class="site-header__nav--item"
+                >
+                    O inwestycji
+                </a>
+                <a href="<?php echo get_home_url() . '/apartaments' ?>"
+                   class="site-header__nav--item"
+                >
+                    Apartamenty
+                </a>
+                <a href="<?php echo get_home_url() . '/galeria' ?>"
+                   class="site-header__nav--item"
+                >
+                    Galeria
+                </a>
+                <a href="<?php echo get_home_url() . '/zwrot-vat' ?>"
+                   class="site-header__nav--item"
+                >
+                    Zwrot VAT
+                </a>
+                <a href="<?php echo get_home_url() . '/wynajem' ?>"
+                   class="site-header__nav--item"
+                >
+                    Wynajem
+                </a>
+                <a href="<?php echo get_home_url() . '/kontakt' ?>"
+                   class="site-header__nav--item"
+                >
+                    Kontakt
+                </a>
+                <a href="#"
+                   class="site-header__nav--btn w-50 m-auto mt-4"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.13 19.13"
+                         class="site-header__nav--btn__icon">
+                        <defs>
+                            <style>.b {
+                                    fill: none;
+                                    fill-rule: evenodd;
+                                    stroke: currentColor;
+                                    stroke-linecap: round;
+                                    stroke-linejoin: round;
+                                    stroke-width: 1.13px;
+                                }</style>
+                        </defs>
+                        <path class="b"
+                              d="M5.63,13.5C3.87,11.77,.9,8.09,.59,5.17c-.11-1,.14-1.88,.66-2.63,.56-.81,1.43-1.48,2.34-1.84,.64-.25,1.21-.21,1.59,.62l1.8,3.88c.35,.75-.58,1.46-1.11,2.21-.34,.47-.39,.6-.11,1.11,.37,.66,1.21,1.72,2.17,2.69,.97,.96,2.03,1.8,2.69,2.17,.51,.28,.63,.23,1.11-.11,.74-.53,1.45-1.46,2.21-1.11l3.88,1.8c.83,.39,.87,.96,.62,1.59-.35,.91-1.03,1.78-1.84,2.34-.75,.52-1.63,.76-2.63,.66-2.93-.31-6.6-3.28-8.34-5.04Z"/>
+                    </svg>
+                    <span class="site-header__nav--btn__text">Zadzwoń</span>
+                </a>
+            </div>
+        </div>
 </header>

@@ -26,6 +26,17 @@ $font-lg-content: 16px;
 $font-lg-content-bigger: 20px;
 $font-lg-content-smaller: 14px;
 
+//Font @media < 991
+$font-sm-big: 40px;
+$font-big-sm-smaller: 32px;
+$font-sm-title: 28px;
+$font-sm-content-title: 24px;
+$font-sm-content: 14px;
+$font-sm-content-bigger: 16px;
+$font-sm-content-smaller: 12px;
+
+
+
 *{
   line-height: 150%;
   font-family: greycliff-cf, sans-serif;

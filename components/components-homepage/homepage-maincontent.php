@@ -7,11 +7,11 @@ $title_right = $mc['title_right'];
 $text_right = $mc['text_right'];
 $img_right = $mc['img_right'];
 ?>
-<section class="homepage-maincontent content mt-5 pt-5">
+<section class="homepage-maincontent content mt-5 pt-md-5">
     <div class="row mx-0 px-0 gx-5">
-        <div class="col-12 col-md-6 ps-0">
+        <div class="col-12 col-md-6 ps-md-0 order-2 order-md-1">
             <div class="row">
-                <div class="col-12 col-md-10">
+                <div class="col-12 col-md-10 d-none d-md-flex">
                     <div class="offset-img left">
                         <img src="<?php echo $offset_img ?>"
                              alt="Rezydencja Słoneczna"
@@ -20,7 +20,7 @@ $img_right = $mc['img_right'];
                     </div>
                 </div>
                 <div class="col-12 col-md-10 offset-md-2">
-                    <div class="content__text my-5 py-5">
+                    <div class="content__text my-5 py-md-5">
                         <?php echo $text_left ?>
                     </div>
                     <img src="<?php echo $img_left ?>"
@@ -31,7 +31,7 @@ $img_right = $mc['img_right'];
                 </div>
             </div>
         </div>
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-6 order-1 order-md-2">
             <div class="row">
                 <div class="col-12 col-md-10">
                     <h2 class="content__title">

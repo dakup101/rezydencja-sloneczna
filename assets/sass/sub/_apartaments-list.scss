@@ -83,4 +83,13 @@
       background: $color-green;
     }
   }
+  @media screen and (max-width: 991px){
+    &{
+      white-space: nowrap;
+    }
+    & th, & td{
+      padding: .5rem 1rem;
+      width: 100%;
+    }
+  }
 }
