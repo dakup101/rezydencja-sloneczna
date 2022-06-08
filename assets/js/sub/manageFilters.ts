@@ -1,12 +1,9 @@
 import makeHTMLtableRow from "./makeHTMLtableRow";
 import makeHTMLcards from "./makeHTMLcards";
+import {viewportWidth, is_demo, is_prod} from "../theme";
 
 export default function manageFilters() {
     console.log('--- Manage Filters loaded ---')
-
-    const is_prod = false;
-    const is_demo = false;
-
     let loaders = document.querySelectorAll('[data-overlay]');
 
     let mode = 0;
@@ -32,6 +29,17 @@ export default function manageFilters() {
             floors.lowerVal = theFloor;
             floors.upperVal = theFloor;
             console.log(floors)
+            if (viewportWidth < 1240){
+                let element = document.querySelector('.table-wrapper');
+                let headerOffset = 100;
+                let elementPosition = element.getBoundingClientRect().top;
+                let offsetPosition = elementPosition + window.scrollY - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                });
+            }
             makeSearch();
         })
     }
@@ -136,9 +144,7 @@ export default function manageFilters() {
         let ajaxUrl = "/rz-prod/wp-admin/admin-ajax.php"
         if (is_prod){
             ajaxUrl="/wp-admin/admin-ajax.php"
-            if (is_demo){
-                ajaxUrl="/www/rz/wp-admin/admin-ajax.php"
-            }
+            if (is_demo) ajaxUrl="/www/rz/wp-admin/admin-ajax.php"
         }
         console.log(ajaxUrl);
         let ajaxNonce = (document.getElementById('nonce') as HTMLInputElement).value;
@@ -167,7 +173,10 @@ export default function manageFilters() {
                 console.log(response)
             })
     }
-    document.querySelector('[data-filter_rest]').addEventListener('click', resetData);
+    document.querySelector('[data-filter_rest]').addEventListener('click', e => {
+        e.preventDefault();
+        resetData();
+    });
 
 
     function resetData(){

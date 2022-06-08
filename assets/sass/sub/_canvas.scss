@@ -84,4 +84,16 @@
     overflow: hidden;
     height: 100%;
   }
+  @media screen and (max-width: 991px){
+    position: relative;
+    width: 100%;
+    & img{
+      position: relative;
+      width: 100%;
+      height: auto;
+      top: 0;
+      left: 0;
+      transform: none;
+    }
+  }
 }

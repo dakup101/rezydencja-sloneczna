@@ -34,6 +34,10 @@ input[type=range] {
     padding: 1rem 2rem;
     font-weight: bold;
     font-size: $font-content-title;
+    @media screen and (max-width: 991px){
+      text-align: center;
+      font-size: $font-lg-content-title;
+    }
   }
   &__info{
     display: flex;
@@ -56,7 +60,9 @@ input[type=range] {
       font-weight: bold;
       font-size: 13px;
     }
-
+    @media screen and (max-width: 991px){
+      flex-direction: column;
+    }
   }
   &__bottom{
     padding: 1rem 2rem;
@@ -69,6 +75,10 @@ input[type=range] {
       font-size: 13px;
       margin-bottom: 0.5rem;
     }
+    @media screen and (max-width: 991px){
+      flex-direction: column;
+
+    }
   }
   &__status{
     display: flex;
@@ -77,8 +87,16 @@ input[type=range] {
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
+      @media(max-width: 1240px){
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        flex-wrap: nowrap;
+        scroll-padding: 8px;
+        scroll-padding-left: 4px;
+      }
     }
     & a{
+      scroll-snap-align: start;
       border: 1px solid #b8c6d1;
       color: $color-dark;
       background: #fff;
@@ -115,8 +133,7 @@ input[type=range] {
     }
   }
   &__sliders{
-    padding: 1rem 2rem;
-    padding-bottom: 0;
+    padding: 1rem 2rem 0;
     display: grid;
     grid-template-columns: 3fr 1fr 2fr;
     gap: 2rem;
@@ -124,6 +141,10 @@ input[type=range] {
       text-transform: uppercase;
       font-size: 13px;
       margin-bottom: .5rem;
+    }
+    @media screen and (max-width: 991px){
+      grid-template-columns: 1fr;
+      gap: 0;
     }
   }
   &__multi-range {
@@ -206,6 +227,7 @@ input[type=range] {
     }
     @media screen and (max-width: 991px){
       height: fit-content;
+      padding-right: 0;
     }
   }
   & .apartaments-list{

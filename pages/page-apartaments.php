@@ -9,7 +9,7 @@
             </div>
         </div>
         <div class="row mx-0 px-0">
-            <div class="col-12 col-md-6 d-flex position-relative overflow-hidden">
+            <div class="col-12 col-md-6 px-0 d-flex position-relative overflow-hidden">
                 <?php get_template_part('/components/component-canvas'); ?>
             </div>
             <div class="col-12 col-md-6 px-0">
