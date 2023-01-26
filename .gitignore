@@ -1,4 +1,7 @@
 node_modules/
 .idea/
+.git/
+.sass-cache/
+.gitattributes
 package-lock.json
 assets/compiled
