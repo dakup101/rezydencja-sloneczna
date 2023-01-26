@@ -5,6 +5,7 @@
                 <img src="<?php echo THEME_URI . '/assets/images/logo_cropped.png' ?>"
                      alt="Słoneczna ezydencja - Logo"
                      class="site-header__logo--img"
+                     loading="lazy"
                 >
             </a>
             <nav class="site-header__nav">
@@ -22,6 +23,11 @@
                    class="site-header__nav--item"
                 >
                     Galeria
+                </a>
+				<a href="<?php echo get_home_url() . '/postep-prac' ?>"
+                   class="site-header__nav--item"
+                >
+                    Postęp prac
                 </a>
                 <a href="<?php echo get_home_url() . '/zwrot-vat' ?>"
                    class="site-header__nav--item"
@@ -50,7 +56,7 @@
                         <path d="M12,0C5.37,0,0,5.37,0,12s5.37,12,12,12,12-5.37,12-12S18.63,0,12,0Zm3,8h-1.35c-.54,0-.65,.22-.65,.78v1.22h2l-.21,2h-1.79v7h-3v-7h-2v-2h2v-2.31c0-1.77,.93-2.69,3.03-2.69h1.97v3Z"/>
                     </svg>
                 </a>
-                <a href="#"
+                <a href="tel:+48883663036"
                    class="site-header__nav--btn"
                 >
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.13 19.13"
@@ -113,7 +119,7 @@
                 >
                     Kontakt
                 </a>
-                <a href="#"
+                <a href="tel:+48883663036"
                    class="site-header__nav--btn w-50 m-auto mt-4"
                 >
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.13 19.13"

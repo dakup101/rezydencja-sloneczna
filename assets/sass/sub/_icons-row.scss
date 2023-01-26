@@ -3,6 +3,7 @@
     &__wrapper{
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 2rem;
       margin-bottom: 2.5rem;
       @media screen and (max-width: 991px){

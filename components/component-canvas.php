@@ -1,6 +1,6 @@
 
     <div class="canvas">
-            <img src="<?php echo THEME_URI . '/assets/images/canvas.png' ?>" alt="">
+            <img src="<?php echo THEME_URI . '/assets/images/canvas.png' ?>" alt="" loading="lazy">
 
             <!-- parter prawo dół -->
             <svg id="svg1"

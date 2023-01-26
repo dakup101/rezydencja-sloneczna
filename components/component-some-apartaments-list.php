@@ -21,13 +21,13 @@ $apartaments = get_posts($args);
                                data-type="0"
                                href="#"
                             >
-                                Powierzchnia [m2]
+                                Powierzchnia [m²]
                                 <svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 15"><polygon id="b" points="21 0 24 3.06 12 15 0 3.06 3 0 12 9 21 0"/></svg>
                             </a>
                         </th>
                         <th>Piętro</th>
                         <th>Ilość pokoi</th>
-                        <th>Cena netto [m2]</th>
+                        <th>Cena netto [m²]</th>
                         <th>Cena netto</th>
                         <th>Numer mieszkania</th>
                         <th>Status</th>
@@ -49,8 +49,8 @@ $apartaments = get_posts($args);
                             $file = $el_args['file'];
                             ?>
                             <td data-meters="<?php echo $meters ?>"><?php echo $meters ?></td>
-                            <td><?php echo $rooms ?></td>
                             <td><?php echo $floor ?></td>
+                            <td><?php echo $rooms ?></td>
                             <td><?php echo $price_meter ?> zł</td>
                             <td><?php echo $price ?> zł</td>
                             <td><?php echo $number ?></td>

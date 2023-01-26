@@ -17,6 +17,7 @@ $slides = get_field('slider');
                             <img src="<?php echo $el['sliders'] ?>"
                                  alt="Rezydencja Słoneczna"
                                  class="swiper-slide__img"
+                                 loading="lazy"
                             >
                         </div>
                     </div>
@@ -47,6 +48,7 @@ $slides = get_field('slider');
             <img src="<?php echo THEME_URI.'/assets/images/bg-mountain.jpg' ?>"
                  alt="Białka Tatrzańska"
                  class="swiper__bg"
+                 loading="lazy"
             >
         </div>
     </section>

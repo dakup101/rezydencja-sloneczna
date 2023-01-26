@@ -1,19 +1,13 @@
 .canvas{
-  position: absolute;
-  height: 100%;
-  width: 1115px;
-  left: 50%;
-  top: 50%;
+  position: relative;
+  height: fit-content;
+  width: 100%;
   z-index: 60;
-  transform: translateY(-50%) translateX(-50%);
   & img{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: auto;
-    height: 100%;
+    position: relative;
+    width: 100%;
+    height: auto;
     z-index: -1;
-    transform: translateY(-50%) translateX(-50%);
   }
   & svg{
     z-index: 6000;

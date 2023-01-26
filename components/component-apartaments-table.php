@@ -47,8 +47,8 @@ $apartaments = get_posts($args);
             $file = $el_args['file'];
             ?>
             <td data-meters="<?php echo $meters ?>"><?php echo $meters ?></td>
-            <td><?php echo $rooms ?></td>
             <td><?php echo $floor ?></td>
+            <td><?php echo $rooms ?></td>
             <td><?php echo '<span style="opacity: .6">' . $price_meter . ' zł</span> / ' . $price . ' zł'?></td>
 <!--            <td>--><?php //echo $price ?><!--</td>-->
             <td><?php echo $number ?></td>

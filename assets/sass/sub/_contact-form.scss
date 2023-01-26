@@ -2,6 +2,9 @@ section.contact{
   background: $color-gray-ligher;
 }
 .cf{
+  & > p{
+    display: none;
+  }
   &__label{
     width: 100%;
     position: relative;

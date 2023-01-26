@@ -1,5 +1,6 @@
 <?php get_header(); ?>
-<main>
-    <h1 class="text-center p-5">Tutej będzie strona!</h1>
+<main class="page-main">
+    <h1 class="text-center mt-5 mb-5">404</h1>
+    <h3 class="text-center mb-5">Nie znaleziono strony</h3>
 </main>
 <?php get_footer(); ?>

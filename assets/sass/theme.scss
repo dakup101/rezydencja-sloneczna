@@ -12,7 +12,8 @@
 @import "sub/btn";
 @import "sub/contact-form";
 @import "sub/footer";
-@import "sub/scroll-gallery";
+//@import "sub/scroll-gallery";
+@import "sub/gallery";
 @import "sub/filters";
 @import "sub/canvas";
 
@@ -131,5 +132,81 @@ img.border-radius{
 }
 
 .table-wrapper{
-  overflow-x: scroll;
+  overflow-x: auto;
+}
+
+.rodo{
+  position: fixed;
+  background: rgba(0,0,0,.8);
+  backdrop-filter: blur(5px);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  bottom: 15px;
+  right: 15px;
+  color: white;
+  box-shadow: 0 7px 15px rgba(0,0,0,0.2);
+  width: 225px;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1000;
+  transition: all .2s ease-in-out;
+  &.show{
+    opacity: 1;
+    pointer-events: all;
+  }
+  & p a{
+    color: $color-green;
+  }
+  &__btn{
+    padding: 10px 15px;
+    background: $color-green;
+    display: block;
+    border-radius: 1000px;
+    color: white;
+    width: fit-content;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 0 auto;
+    z-index: 100;
+  }
+  @media(max-width: 991px){
+    width: calc(100% - 30px);
+    font-size: 12px;
+  }
+}
+
+.apartaments-view-element{
+  display: none;
+  &.active{
+    display: block;
+  }
+}
+
+.apartaments-filters-view{
+  align-items: center;
+  margin-bottom: 2rem;
+  font-size: 18px;
+  font-weight: bold;
+  & button{
+    scroll-snap-align: start;
+    border: 1px solid #b8c6d1;
+    color: #434236;
+    background: #fff;
+    border-radius: 1000px;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    transition: all 0.1s ease-in-out;
+    font-size: 16px;
+    font-weight: normal;
+    &.active, &:hover{
+      background: #06bd69;
+      border-color: #06bd69;
+      color: #fff;
+    }
+    & + button{
+      margin-left: 1rem;
+    }
+  }
+
 }

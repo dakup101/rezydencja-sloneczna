@@ -27,6 +27,18 @@ input[type=range] {
     appearance: none;
     pointer-events: all;
   }
+  &::-moz-range-thumb{
+    height: 22px;
+    width: 22px;
+    border-radius: 28px;
+    background-color: white;
+    border: 1px solid #b8c6d1;
+    position: relative;
+    margin: 5px 0;
+    cursor: pointer;
+    appearance: none;
+    pointer-events: all;
+  }
 }
 .filters{
   &__header{
@@ -37,6 +49,7 @@ input[type=range] {
     @media screen and (max-width: 991px){
       text-align: center;
       font-size: $font-lg-content-title;
+      padding: 1rem;
     }
   }
   &__info{
@@ -62,6 +75,8 @@ input[type=range] {
     }
     @media screen and (max-width: 991px){
       flex-direction: column;
+      padding: 1rem;
+      align-items: flex-start;
     }
   }
   &__bottom{
@@ -77,6 +92,7 @@ input[type=range] {
     }
     @media screen and (max-width: 991px){
       flex-direction: column;
+      padding: 1rem;
 
     }
   }
@@ -88,7 +104,7 @@ input[type=range] {
       flex-wrap: wrap;
       gap: 1rem;
       @media(max-width: 1240px){
-        overflow-x: scroll;
+        overflow-x: auto;
         scroll-snap-type: x mandatory;
         flex-wrap: nowrap;
         scroll-padding: 8px;
@@ -132,6 +148,13 @@ input[type=range] {
       }
     }
   }
+  &__parking{
+    padding: 1rem 2rem;
+    @media (max-width: 991px) {
+      padding: 1rem;
+
+    }
+  }
   &__sliders{
     padding: 1rem 2rem 0;
     display: grid;
@@ -145,6 +168,7 @@ input[type=range] {
     @media screen and (max-width: 991px){
       grid-template-columns: 1fr;
       gap: 0;
+      padding: 1rem;
     }
   }
   &__multi-range {
@@ -158,8 +182,13 @@ input[type=range] {
       padding: 0;
       position: absolute;
       left: 0;
+      padding: 10px 0;
       &:nth-child(1) {
         &::-webkit-slider-thumb::before {
+          background-color: #fff;
+          border: 1px solid #b8c6d1;
+        }
+        &::-moz-range-thumb {
           background-color: #fff;
           border: 1px solid #b8c6d1;
         }
@@ -167,29 +196,39 @@ input[type=range] {
       &:nth-child(2) {
         background: none;
         &::-webkit-slider-thumb::before {
-          background-color: #b8c6d1;
+          background-color: #fff;
+          border: 1px solid #b8c6d1;
+        }
+        &::-moz-range-thumb {
+          background-color: #fff;
+          border: 1px solid #b8c6d1;
         }
       }
     }
     &--lefty{
       position: absolute;
-      bottom: 0;
+      bottom: -10px;
       left: 0;
     }
     &--righty{
       position: absolute;
-      bottom: 0;
+      bottom: -10px;
       right: 0;
     }
   }
 }
 
 .apartament-filters{
+  max-width: 1920px;
+  margin: 0 auto;
+  &-row{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
   & .table-wrapper{
-    height: 350px;
-    overflow-y: auto;
     padding-right: 10px;
     position: relative;
+    margin-bottom: 2rem;
     & .loader-overlay{
       display: flex;
       align-items: center;
@@ -225,6 +264,21 @@ input[type=range] {
     &::-webkit-scrollbar-thumb:hover {
       background: $color-green-dark;
     }
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+    &::-webkit-scrollbar-track {
+      border-radius: 7.5px;
+      background: $color-gray-ligher;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: $color-green;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background: $color-green-dark;
+    }
     @media screen and (max-width: 991px){
       height: fit-content;
       padding-right: 0;
@@ -232,18 +286,20 @@ input[type=range] {
   }
   & .apartaments-list{
     display: none;
+    margin-top: 1rem;
     &.active{
       display: table;
     }
     & *{
-      font-size: 12px;
+      font-size: 14px;
     }
     & th, & td{
-      padding: .5rem;
+      padding: .75rem .5rem;
     }
     & th{
       padding: 1.5rem .5rem;
       border-bottom-width: 1px;
+      font-size: 16px;
     }
     & thead{
       background: #f5f5f5;
@@ -317,7 +373,7 @@ input[type=range] {
 }
 .apartaments-cards{
   padding: 1rem 2rem;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 2rem;
   display: none;
   &.active{
@@ -375,6 +431,9 @@ input[type=range] {
         margin-bottom: 0;
       }
     }
+  }
+  @media screen and(max-width: 1240px){
+    grid-template-columns: 1fr 1fr;
   }
   @media screen and(max-width: 991px){
     grid-template-columns: 1fr;
