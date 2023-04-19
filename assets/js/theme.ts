@@ -13,6 +13,8 @@ import faqHandle from "./sub/faq-handle";
 import manageFiltersHandle from "./sub/manageFilters-handle";
 import galleryScriptsHandle from "./sub/galleryScripts-handle";
 import apartamentsViewHandle from "./sub/apartamentsView-handle";
+import lightboxHandle from "./sub/lightbox-handle";
+
 // Before Render
 
 // -- Environment
@@ -41,8 +43,11 @@ window.addEventListener("DOMContentLoaded", () => {
 	scrollGalleryHandle();
 	faqHandle();
 	manageFiltersHandle();
-	galleryScriptsHandle();
+	// galleryScriptsHandle();
 	apartamentsViewHandle();
+	lightboxHandle();
+
+
 	let mobileNavTrigger = document.getElementById("mobileMenu");
 	mobileNavTrigger.addEventListener("change", () => {
 		document.querySelector("[data-site_header]").classList.toggle("darken");

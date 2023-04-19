@@ -22,21 +22,23 @@ img {
   user-select: none;
 }
 
-.site-container{
+.site-container {
   width: 100%;
   padding-left: 5rem;
   padding-right: 5rem;
-  @media screen and (max-width: 1600px){
+
+  @media screen and (max-width: 1600px) {
     padding-right: 2.5rem;
     padding-left: 2.5rem;
   }
-  @media screen and (max-width: 991px){
+
+  @media screen and (max-width: 991px) {
     padding-right: 1rem;
     padding-left: 1rem;
   }
 }
 
-.sr-container{
+.sr-container {
   max-width: 1410px;
   padding-right: 15px;
   padding-left: 15px;
@@ -44,46 +46,50 @@ img {
   display: block;
 }
 
-.offset-img{
-  &.left img{
+.offset-img {
+  &.left img {
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;
-    @media screen and(max-width: 991px){
-      &{
+
+    @media screen and(max-width: 991px) {
+      & {
         border-radius: 1rem;
       }
     }
   }
 }
 
-img.border-radius{
+img.border-radius {
   border-radius: 1rem;
 }
-.page-main{
+
+.page-main {
   margin-top: 165px;
 }
 
 
-.contact-page{
-  & a{
+.contact-page {
+  & a {
     color: $color-green;
     width: 100%;
     display: block;
     font-size: $font-content;
     font-weight: bold;
     text-decoration: none;
-    &:hover{
+
+    &:hover {
       color: $color-green-dark;
     }
   }
 }
 
-.faq{
+.faq {
   overflow: hidden;
   margin-top: 1.5rem;
   border-top: 1px solid gray;
   color: $color-dark;
-  &-title{
+
+  &-title {
     position: relative;
     display: block;
     width: 100%;
@@ -95,10 +101,12 @@ img.border-radius{
     color: $color-dark;
     transition: all .2s ease-in-out;
     cursor: pointer;
-    &:hover{
+
+    &:hover {
       color: $color-green;
     }
-    &:after{
+
+    &:after {
       content: '+';
       font-size: 24px;
       font-weight: bold;
@@ -108,61 +116,67 @@ img.border-radius{
       top: 50%;
       transform: translateY(-50%);
     }
-    &.active{
-      &:after{
+
+    &.active {
+      &:after {
         content: '-';
       }
     }
   }
-  &-title.active + &-content{
+
+  &-title.active+&-content {
     margin-top: 1.5rem;
   }
-&-content{
-  height: 0;
-  transition: all .2s ease-in-out;
-}
+
+  &-content {
+    height: 0;
+    transition: all .2s ease-in-out;
+  }
 }
 
-.bg-gray-light{
+.bg-gray-light {
   background: $color-gray-ligher;
 }
 
-.bg-gray-light{
+.bg-gray-light {
   background: $color-gray-ligher;
 }
 
-.map iframe{
+.map iframe {
   width: 100% !important;
 }
 
-.table-wrapper{
+.table-wrapper {
   overflow-x: auto;
 }
 
-.rodo{
+.rodo {
   position: fixed;
-  background: rgba(0,0,0,.8);
+  background: rgba(0, 0, 0, .8);
   backdrop-filter: blur(5px);
   padding: 1.5rem;
   border-radius: 1rem;
   bottom: 15px;
   right: 15px;
   color: white;
-  box-shadow: 0 7px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.2);
   width: 225px;
   text-align: center;
   opacity: 0;
   pointer-events: none;
   z-index: 1000;
   transition: all .2s ease-in-out;
-  &.show{
+
+  &.show {
     opacity: 1;
     pointer-events: all;
   }
-  & p a{
+
+  & p a {
     color: $color-green;
   }
-  &__btn{
+
+  &__btn {
     padding: 10px 15px;
     background: $color-green;
     display: block;
@@ -174,25 +188,28 @@ img.border-radius{
     margin: 0 auto;
     z-index: 100;
   }
-  @media(max-width: 991px){
+
+  @media(max-width: 991px) {
     width: calc(100% - 30px);
     font-size: 12px;
   }
 }
 
-.apartaments-view-element{
+.apartaments-view-element {
   display: none;
-  &.active{
+
+  &.active {
     display: block;
   }
 }
 
-.apartaments-filters-view{
+.apartaments-filters-view {
   align-items: center;
   margin-bottom: 2rem;
   font-size: 18px;
   font-weight: bold;
-  & button{
+
+  & button {
     scroll-snap-align: start;
     border: 1px solid #b8c6d1;
     color: #434236;
@@ -203,13 +220,46 @@ img.border-radius{
     transition: all 0.1s ease-in-out;
     font-size: 16px;
     font-weight: normal;
-    &.active, &:hover{
+
+    &.active,
+    &:hover {
       background: #06bd69;
       border-color: #06bd69;
       color: #fff;
     }
-    & + button{
+
+    &+button {
       margin-left: 1rem;
     }
   }
+}
+
+.standards {
+  & .row {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 2px dashed #ccc;
+  }
+
+  &-title {
+    margin-top: 40px;
+    font-weight: bold;
+  }
+
+  &-content {
+    margin-top: 20px !important;
+  }
+
+  &-left {
+    font-weight: bold;
+    height: 100%;
+  }
+
+  &-right {
+    height: 100%;
+  }
+}
+
+.gdesc-inner{
+  display: none;
 }

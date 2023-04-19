@@ -2,7 +2,7 @@
 add_action('wp_enqueue_scripts', 'add_theme_scripts');
 
 function add_theme_scripts(){
-	wp_enqueue_script('theme-js', THEME_URI.'/assets/compiled/theme.js');
+	wp_enqueue_script('theme-js', THEME_URI.'/assets/compiled/theme.js', array(), time(), 'all');
 	wp_enqueue_style( 'theme-css', THEME_URI.'/assets/compiled/theme.css');
 	wp_enqueue_style( 'bootstrap-css', THEME_URI.'/assets/compiled/bootstrap.min.css');
 }
