@@ -40,7 +40,7 @@ export default function manageFilters() {
 		});
 	}
 
-	let statusSwitchers = document.querySelectorAll("[data-status]");
+	let statusSwitchers = document.querySelectorAll("[data-status_search]");
 	for (let switcher of statusSwitchers) {
 		switcher.addEventListener("click", (e) => {
 			e.preventDefault();
