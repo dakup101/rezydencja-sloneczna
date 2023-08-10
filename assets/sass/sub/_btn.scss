@@ -1,19 +1,56 @@
-.site-btn{
-  display: block;
-  padding: 1rem 2rem;
-  width: fit-content;
-  text-transform: uppercase;
-  border-radius: 1000px;
-  text-decoration: none;
-  transition: all .2s ease-in-out;
-  margin: 0 auto;
-  border: none;
-  &__green{
-    background: $color-green;
-    color: #333;
-    &:hover{
-      background: $color-green-dark;
-      color: white;
-    }
-  }
+.site-btn {
+	display: block;
+	padding: 1rem 2rem;
+	width: fit-content;
+	text-transform: uppercase;
+	border-radius: 1000px;
+	text-decoration: none;
+	transition: all 0.2s ease-in-out;
+	margin: 0 auto;
+	border: none;
+	&__green {
+		background: $color-green;
+		color: #333;
+		&:hover {
+			background: $color-green-dark;
+			color: white;
+		}
+	}
+}
+
+.button {
+	display: block;
+	width: fit-content;
+	border: 2px solid transparent;
+	letter-spacing: 2px;
+	font-size: 14px;
+	text-transform: uppercase;
+	padding: 16px 36px;
+	border-radius: 10000px;
+	text-decoration: none;
+	transition: all 0.2s ease-in-out;
+	font-weight: bold;
+
+	&__fill {
+		background: $gold-400;
+		border-color: $gold-400;
+		color: #fff;
+
+		&:hover {
+			background: $gold-500;
+			border-color: $gold-500;
+			color: #fff;
+		}
+	}
+
+	&__stroke {
+		background: transparent;
+		border-color: $gold-400;
+		color: #fff;
+
+		&:hover {
+			background: $gold-400;
+			color: #fff;
+		}
+	}
 }
