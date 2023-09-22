@@ -9,10 +9,10 @@
 	margin: 0 auto;
 	border: none;
 	&__green {
-		background: $color-green;
-		color: #333;
+		background: $gold-400;
+		color: #fff;
 		&:hover {
-			background: $color-green-dark;
+			background: $gold-500;
 			color: white;
 		}
 	}
@@ -22,7 +22,7 @@
 	display: block;
 	width: fit-content;
 	border: 2px solid transparent;
-	letter-spacing: 2px;
+	letter-spacing: 0.1em;
 	font-size: 14px;
 	text-transform: uppercase;
 	padding: 16px 36px;
@@ -30,6 +30,7 @@
 	text-decoration: none;
 	transition: all 0.2s ease-in-out;
 	font-weight: bold;
+	text-align: center;
 
 	&__fill {
 		background: $gold-400;
@@ -47,6 +48,17 @@
 		background: transparent;
 		border-color: $gold-400;
 		color: #fff;
+
+		&:hover {
+			background: $gold-400;
+			color: #fff;
+		}
+	}
+
+	&__stroke-accent {
+		background: transparent;
+		border-color: $gold-400;
+		color: $gold-400;
 
 		&:hover {
 			background: $gold-400;

@@ -1,114 +1,297 @@
-.offer-slider{
-  position: relative;
-  & .swiper{
-    max-width: 100%;
-    height: 550px;
-    max-height: 550px;
-    padding-bottom: 40px;
-    @media (max-width: 991px){
-      height: 360px;
-    }
-    &-slide{
-      transition: all .4s ease-in-out;
-      height: fit-content;
-      &__inner{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-        border-radius: 1rem;
-        height: 300px;
-        transition: all .4s ease-in-out;
-      }
-      &__img{
-        min-width: 100%;
-        min-height: 100%;
-        & img{
-          pointer-events: none;
-        }
-      }
-      &-active *{
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
-      }
-    }
-    &-slide-next + &-slide{
-      background: red !important;
-      width: 35% !important;
-      & .swiper-slide__inner{
-        height: 500px;
-      }
-    }
-    &-button{
-      &__wrapper{
-        position: absolute;
-        width: 35%;
-        left: calc(50% + 15px);
-        bottom: 0;
-        display: flex;
-        height: 20px;
-        align-items: center;
-        justify-content: space-between;
-        @media screen and (max-width: 991px){
-          &{
-            width: 150px;
-            left: auto;
-            right: 1rem;
-          }
-        }
-        &--buttons{
-          position: relative;
-          display: flex;
-          gap: 2rem;
-          height: 100%;
-        }
-      }
-      &-prev, &-next{
-        position: unset;
-        height: 20px;
-        width: fit-content;
-        margin: 0;
-        color: #333
-      }
-      &-prev{
-        & svg{
-          height: 100%;
-          width: auto;
-          color: currentColor;
-          fill: currentColor;
-          transform: rotate(180deg);
-        }
-        &:after{
-          display: none !important;
-        }
-        &:hover{
-          color: green;
-        }
-      }
-      &-next{
-        &:after{
-          display: none !important;
-        }
-        & svg{
-          height: 100%;
-          width: auto;
-          color: currentColor;
-          fill: currentColor;
-        }
-        &:hover{
-          color: green;
-        }
-      }
-    }
-    &__bg{
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 50%;
-    }
-    &__counter{
-      user-drag: none;
-      user-select: none;
-    }
-  }
+.offer-slider {
+	position: relative;
+	& .swiper {
+		max-width: 100%;
+		height: 550px;
+		max-height: 550px;
+		padding-bottom: 40px;
+		@media (max-width: 991px) {
+			height: 360px;
+		}
+		&-contact-link {
+			font-size: 16px;
+			color: $gold-400;
+			text-decoration: underline;
+
+			&:hover {
+				color: $gold-500;
+			}
+		}
+		&-slide {
+			transition: all 0.4s ease-in-out;
+			height: fit-content;
+			&__inner {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				overflow: hidden;
+				border-radius: 1rem;
+				height: 300px;
+				transition: all 0.4s ease-in-out;
+			}
+			&__img {
+				min-width: 100%;
+				min-height: 100%;
+				& img {
+					pointer-events: none;
+				}
+			}
+			&-active * {
+				border-top-left-radius: 0;
+				border-bottom-left-radius: 0;
+			}
+		}
+		&-slide-next + &-slide {
+			background: red !important;
+			width: 35% !important;
+			& .swiper-slide__inner {
+				height: 500px;
+			}
+		}
+		&-button {
+			&__wrapper {
+				position: absolute;
+				width: 35%;
+				left: calc(50% + 15px);
+				bottom: 0;
+				display: flex;
+				height: 30px;
+				align-items: center;
+				justify-content: space-between;
+				@media screen and (max-width: 991px) {
+					width: 100%;
+					left: auto;
+					right: 0rem;
+					padding: 0 1rem;
+				}
+				&--buttons {
+					position: relative;
+					display: flex;
+					gap: 2rem;
+					height: 100%;
+				}
+			}
+			&-prev,
+			&-next {
+				position: unset;
+				height: 15px;
+				width: fit-content;
+				margin: 0;
+				color: $gray-300;
+			}
+			&-prev {
+				& svg {
+					height: 100%;
+					width: auto;
+					color: currentColor;
+					fill: currentColor;
+					transform: rotate(180deg);
+
+					[stroke] {
+						stroke: currentColor;
+					}
+
+					[fill] {
+						fill: currentColor;
+					}
+				}
+				&:after {
+					display: none !important;
+				}
+				&:hover {
+					color: $gold-500;
+				}
+			}
+			&-next {
+				&:after {
+					display: none !important;
+				}
+				& svg {
+					height: 100%;
+					width: auto;
+					color: currentColor;
+					fill: currentColor;
+
+					[stroke] {
+						stroke: currentColor;
+					}
+
+					[fill] {
+						fill: currentColor;
+					}
+				}
+				&:hover {
+					color: $gold-500;
+				}
+			}
+		}
+		&__bg {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 50%;
+		}
+		&__counter {
+			user-drag: none;
+			user-select: none;
+		}
+	}
+
+	@media screen and (min-width: 1240px) {
+		& .swiper-slide-next + .swiper-slide {
+			width: 35% !important;
+		}
+
+		& .swiper-slide-next + .swiper-slide .swiper-slide__inner {
+			height: 500px;
+		}
+	}
+
+	@media screen and (max-width: 991px) {
+		& .swiper-slide {
+			height: 300px;
+			padding: 1rem;
+		}
+	}
+}
+
+.progress-build {
+	&__item {
+		aspect-ratio: 4/5.5;
+		overflow: hidden;
+		position: relative;
+		border-radius: 20px;
+		height: 100%;
+
+		&--img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+
+			img {
+				object-fit: cover;
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+		&--label {
+			position: absolute;
+			top: 24px;
+			left: 25px;
+			font-size: 12px;
+			letter-spacing: 0.1em;
+			padding: 10px 24px;
+			background: $black-500;
+			text-transform: uppercase;
+			border-radius: 1000px;
+			color: white;
+		}
+	}
+
+	position: relative;
+	padding-bottom: 50px;
+	& .swiper {
+		max-width: 100%;
+		padding-bottom: 50px;
+
+		&-contact-link {
+			font-size: 16px;
+			color: $gold-400;
+			text-decoration: underline;
+
+			&:hover {
+				color: $gold-500;
+			}
+		}
+
+		&-button {
+			&__wrapper {
+				position: absolute;
+				width: 30%;
+				right: 0;
+				bottom: 0;
+				display: flex;
+				height: 30px;
+				align-items: center;
+				justify-content: space-between;
+				@media screen and (max-width: 991px) {
+					width: 100%;
+					left: auto;
+					right: 0;
+				}
+				&--buttons {
+					position: relative;
+					display: flex;
+					gap: 2rem;
+					height: 100%;
+				}
+			}
+			&-prev,
+			&-next {
+				position: unset;
+				height: 15px;
+				width: fit-content;
+				margin: 0;
+				color: $gray-300;
+			}
+			&-prev {
+				& svg {
+					height: 100%;
+					width: auto;
+					color: currentColor;
+					fill: currentColor;
+					transform: rotate(180deg);
+
+					[stroke] {
+						stroke: currentColor;
+					}
+
+					[fill] {
+						fill: currentColor;
+					}
+				}
+				&:after {
+					display: none !important;
+				}
+				&:hover {
+					color: $gold-500;
+				}
+			}
+			&-next {
+				&:after {
+					display: none !important;
+				}
+				& svg {
+					height: 100%;
+					width: auto;
+					color: currentColor;
+					fill: currentColor;
+
+					[stroke] {
+						stroke: currentColor;
+					}
+
+					[fill] {
+						fill: currentColor;
+					}
+				}
+				&:hover {
+					color: $gold-500;
+				}
+			}
+		}
+		&__bg {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 50%;
+		}
+		&__counter {
+			user-drag: none;
+			user-select: none;
+		}
+	}
 }

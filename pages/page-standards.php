@@ -1,5 +1,5 @@
 <?php /* Template Name: Standardy */ ?>
-<?php get_header('page'); ?>
+<?php get_header(); ?>
 <main class="page-main">
     <section class="mb-5">
         <div class="row mx-0 px-0">

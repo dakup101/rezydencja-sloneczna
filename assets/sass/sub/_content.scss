@@ -1,65 +1,28 @@
-.content{
-  & img{
-    width: 100%;
-  }
-  &__text{
-    font-size: $font-content;
-    & p{
-      font-weight: 300;
-    }
-    & strong{
-      font-weight: 600;
-    }
-    & a{
-      color: $color-green;
-      &:hover{
-        color: $color-green-dark;
-      }
-    }
-
-  }
-  &__title{
-    font-size: $font-content-title;
-    font-weight: 300;
-    & p{
-      font-weight: inherit;
-    }
-    & strong{
-      font-weight: 600;
-    }
-  }
-  @media screen and (max-width: 1600px){
-    &__text{
-      font-size: $font-xl-content;
-    }
-    &__title{
-      font-size: $font-xl-content-title;
-    }
-  }
-  @media screen and (max-width: 1400px){
-    &__text{
-      font-size: $font-lg-content;
-    }
-    &__title{
-      font-size: $font-lg-content-title;
-    }
-  }
-  @media screen and (max-width: 991px){
-    &__text{
-      font-size: $font-sm-content;
-    }
-    &__title{
-      font-size: $font-sm-content-title;
-    }
-  }
-}
-
-h1.content__title{
-  font-size: $font-big-smaller;
-  @media screen and (max-width: 1600px){
-    font-size: $font-big-xl-smaller;
-  }
-  @media screen and (max-width: 1400px){
-    font-size: $font-big-lg-smaller;
-  }
+.content {
+	& img {
+		width: 100%;
+	}
+	&__text {
+		font-size: 18px;
+		font-weight: 300;
+		& p {
+			font-weight: 300;
+		}
+		& strong {
+			font-weight: 700;
+		}
+		& a {
+			color: $gold-400;
+			&:hover {
+				color: $gold-500;
+			}
+		}
+	}
+	&__title {
+		font-size: 32px;
+		font-weight: 700;
+		& * {
+			font-weight: inherit;
+		}
+	}
 }

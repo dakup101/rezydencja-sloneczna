@@ -1,5 +1,5 @@
 <?php /* Template Name: Zwrot VAT */ ?>
-<?php get_header('page'); ?>
+<?php get_header(); ?>
 <?php
 $title = get_field('title');
 $subtitle = get_field('subtitle');

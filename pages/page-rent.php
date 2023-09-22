@@ -1,5 +1,5 @@
 <?php /* Template Name: Wynajem */ ?>
-<?php get_header('page'); ?>
+<?php get_header(); ?>
     <main class="page-main">
         <section class="rent-part-1 mb-5">
             <?php

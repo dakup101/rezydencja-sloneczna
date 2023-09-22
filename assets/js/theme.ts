@@ -14,7 +14,8 @@ import manageFiltersHandle from "./sub/manageFilters-handle";
 import galleryScriptsHandle from "./sub/galleryScripts-handle";
 import apartamentsViewHandle from "./sub/apartamentsView-handle";
 import lightboxHandle from "./sub/lightbox-handle";
-
+import progressHandle from "./sub/progress-handle";
+import blogTagsHandle from "./sub/blogTags-handle";
 // Before Render
 
 // -- Environment
@@ -46,7 +47,8 @@ window.addEventListener("DOMContentLoaded", () => {
 	// galleryScriptsHandle();
 	apartamentsViewHandle();
 	lightboxHandle();
-
+	progressHandle();
+	blogTagsHandle();
 
 	let mobileNavTrigger = document.getElementById("mobileMenu");
 	mobileNavTrigger.addEventListener("change", () => {

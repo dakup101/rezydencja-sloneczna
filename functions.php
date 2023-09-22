@@ -3,7 +3,10 @@ define('THEME', get_template_directory());
 define('THEME_URI', get_template_directory_uri());
 //only for PDFs of apartaments
 define('THEME_DOC', get_home_url() . '/wp-content/uploads/2022/06');
+
 add_theme_support('title-tag');
+add_theme_support('post-thumbnails');
+
 require_once(THEME . '/functions/php-add-scripts-styles.php');
 require_once(THEME . '/functions/php-remove-editor.php');
 require_once(THEME . '/functions/php-allow-svg.php');

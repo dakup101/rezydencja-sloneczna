@@ -1,5 +1,5 @@
 <?php /* Template Name: Apartamenty */ ?>
-<?php get_header('page') ?>
+<?php get_header() ?>
 <main class="page-main">
     <div class="row px-0 apartament-filters-row">
         <section class="apartament-filters col-md-10 col-12 offset-md-1">

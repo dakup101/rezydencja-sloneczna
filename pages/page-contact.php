@@ -1,5 +1,5 @@
 <?php /* Template Name: Kontakt */ ?>
-<?php get_header('page'); ?>
+<?php get_header(); ?>
 <?php
 $title_left = get_field('title');
 $text_left = get_field('text_left');
